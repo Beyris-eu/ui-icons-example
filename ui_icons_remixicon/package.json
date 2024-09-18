@@ -1,6 +1,6 @@
 {
   "name": "ui_icons_remixicon",
-  "version": "1.0.0",
+  "private": true,
   "license": "ISC",
   "dependencies": {
     "remixicon": "^4.3.0"

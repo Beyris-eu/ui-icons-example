@@ -1,7 +1,7 @@
 # Collections from https://icon-sets.iconify.design/
 iconify_flags:
-  label: Flags
   enabled: true
+  label: Flags
   extractor: iconify
   config:
     collections:
@@ -37,8 +37,8 @@ iconify_flags:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_circle_flags:
-  label: Circle flags
   enabled: true
+  label: Circle flags
   extractor: iconify
   config:
     collections:
@@ -74,8 +74,8 @@ iconify_circle_flags:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_geo:
-  label: Geo
   enabled: true
+  label: Geo
   extractor: iconify
   config:
     collections:
@@ -117,8 +117,8 @@ iconify_geo:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_animated:
-  label: Animated
   enabled: true
+  label: Animated
   extractor: iconify
   config:
     collections:
@@ -161,8 +161,8 @@ iconify_animated:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_emoji:
-  label: Emoji
   enabled: true
+  label: Emoji
   extractor: iconify
   config:
     collections:
@@ -210,8 +210,8 @@ iconify_emoji:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_programming:
-  label: Programming
   enabled: true
+  label: Programming
   extractor: iconify
   config:
     collections:

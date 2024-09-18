@@ -1,6 +1,8 @@
 uswds_sprite:
+  enabled: true
   label: USWDS
-  description: Icons help communicate meaning, actions, status, or feedback.
+  version: 3.8.1
+  description: "Icons help communicate meaning, actions, status, or feedback."
   links:
     - https://designsystem.digital.gov/components/icon/
     - https://github.com/uswds/uswds/

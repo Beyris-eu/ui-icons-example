@@ -1,6 +1,7 @@
 heroicons_solid:
   enabled: true
   label: Hero solid
+  version: 2.1.5
   description: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
   links:
     - https://heroicons.com/solid
@@ -32,6 +33,7 @@ heroicons_solid:
 heroicons_outline:
   enabled: true
   label: Hero outline
+  version: 2.1.5
   description: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
   links:
     - https://heroicons.com/outline

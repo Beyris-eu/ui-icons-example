@@ -1,6 +1,6 @@
 {
   "name": "ui_icons_dsfr",
-  "version": "1.0.0",
+  "private": true,
   "license": "ISC",
   "dependencies": {
     "@gouvfr/dsfr": "^1.12.1"

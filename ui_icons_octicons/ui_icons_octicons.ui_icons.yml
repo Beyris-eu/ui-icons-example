@@ -1,6 +1,8 @@
 octicons:
+  enabled: true
   label: Octicons
-  description: A scalable set of icons handcrafted by GitHub.
+  version: 19.11.0
+  description: "A scalable set of icons handcrafted by GitHub."
   links:
     - https://primer.style/foundations/icons
     - https://github.com/primer/octicons

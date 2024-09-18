@@ -1,5 +1,7 @@
 remixicon:
+  enabled: true
   label: Remix
+  version: 4.3.0
   description: "Open-source neutral-style system symbols elaborately crafted for designers and developers."
   links:
     - https://remixicon.com/
@@ -37,6 +39,7 @@ remixicon:
 remixicon_sprite:
   enabled: false
   label: Remix
+  version: 4.3.0
   description: "Open-source neutral-style system symbols elaborately crafted for designers and developers."
   links:
     - https://remixicon.com/

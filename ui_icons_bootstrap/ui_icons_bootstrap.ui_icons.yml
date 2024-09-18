@@ -1,6 +1,6 @@
 bootstrap:
   enabled: true
-  label: "Bootstrap [Sprite]"
+  label: "Bootstrap"
   description: "Bootstrap icons from SVG Sprite single source."
   links:
     - https://icons.getbootstrap.com/#usage
@@ -37,7 +37,7 @@ bootstrap:
 # Example with local SVG files.
 bootstrap_svg:
   enabled: false
-  label: "Bootstrap [SVG]"
+  label: "Bootstrap"
   description: "Bootstrap icons from SVG files."
   links:
     - https://icons.getbootstrap.com/#usage

@@ -1,6 +1,7 @@
 drupal:
-  label: Drupal core Icons
-  description: Drupal core icons available within Drupal.
+  enabled: true
+  label: "Drupal core Icons"
+  description: "Drupal core icons available within Drupal."
   extractor: path
   config:
     sources:

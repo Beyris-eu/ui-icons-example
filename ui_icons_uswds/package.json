@@ -1,6 +1,6 @@
 {
   "name": "uswds",
-  "version": "1.0.0",
+  "private": true,
   "license": "ISC",
   "dependencies": {
     "@uswds/uswds": "^3.8.1"

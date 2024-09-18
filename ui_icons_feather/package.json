@@ -1,6 +1,6 @@
 {
   "name": "ui_icons_feather",
-  "version": "1.0.0",
+  "private": true,
   "license": "ISC",
   "dependencies": {
     "feather-icons": "^4.29.2"

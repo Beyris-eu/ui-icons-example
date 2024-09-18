@@ -1,6 +1,6 @@
 feather:
   enabled: true
-  label: "Feather"
+  label: Feather
   description: "Feather icons from SVG sources."
   links:
     - https://feathericons.com/
@@ -56,7 +56,7 @@ feather:
 
 feather_sprite:
   enabled: false
-  label: Feather [Sprite]
+  label: Feather
   description: "Feather icons from SVG Sprite."
   links:
     - https://feathericons.com/

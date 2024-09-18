@@ -1,5 +1,6 @@
 material_filled:
-  label: Material Symbols filled
+  enabled: true
+  label: Material filled
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
@@ -20,7 +21,8 @@ material_filled:
     <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
 
 material_outlined:
-  label: Material Symbols outlined
+  enabled: true
+  label: Material outlined
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
@@ -41,7 +43,8 @@ material_outlined:
     <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
 
 material_round:
-  label: Material Symbols round
+  enabled: true
+  label: Material round
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
@@ -62,7 +65,8 @@ material_round:
     <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
 
 material_sharp:
-  label: Material Symbols sharp
+  enabled: true
+  label: Material sharp
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
@@ -83,7 +87,8 @@ material_sharp:
     <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
 
 material_two_tone:
-  label: Material Symbols two-tone
+  enabled: true
+  label: Material two-tone
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons

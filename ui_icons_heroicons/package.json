@@ -1,6 +1,6 @@
 {
   "name": "ui_icons_heroicons",
-  "version": "1.0.0",
+  "private": true,
   "license": "ISC",
   "dependencies": {
     "heroicons": "^2.1.5"

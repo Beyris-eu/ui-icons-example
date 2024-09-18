@@ -1,4 +1,5 @@
 dsfr_svg:
+  enabled: true
   label: DSFR
   description: "DSFR icons from SVG files, without DSFR full theme."
   links:

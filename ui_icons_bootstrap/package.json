@@ -1,6 +1,6 @@
 {
   "name": "ui_icons_bootstrap",
-  "version": "1.0.0",
+  "private": true,
   "main": "index.js",
   "license": "ISC",
   "dependencies": {
