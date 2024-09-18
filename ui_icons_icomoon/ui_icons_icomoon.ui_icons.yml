@@ -14,7 +14,7 @@ icomoon:
       type: "integer"
       default: 32
   template: >
-    <svg class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
+    <svg viewBox="0 0 32 32" class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
       {{ content }}
     </svg>
 

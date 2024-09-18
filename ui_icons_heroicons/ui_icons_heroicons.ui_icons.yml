@@ -1,8 +1,8 @@
-heroicons_solid:
+heroicons:
   enabled: true
-  label: Hero solid
+  label: Hero
   version: 2.1.5
-  description: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
+  description: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS."
   links:
     - https://heroicons.com/solid
     - https://github.com/tailwindlabs/heroicons/?tab=readme-ov-file#basic-usage
@@ -14,7 +14,7 @@ heroicons_solid:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     color:
       title: Fill color
       type: "string"
@@ -24,17 +24,17 @@ heroicons_solid:
       class="heroicon icon-{{ icon_id|clean_class }}"
       fill="{{ color|default('currentColor') }}"
       viewBox="0 0 24 24"
-      width="{{ size|default(24) }}"
-      height="{{ size|default(24) }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
     >
       {{ content }}
     </svg>
 
 heroicons_outline:
-  enabled: true
+  enabled: false
   label: Hero outline
   version: 2.1.5
-  description: Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.
+  description: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS."
   links:
     - https://heroicons.com/outline
     - https://github.com/tailwindlabs/heroicons/?tab=readme-ov-file#basic-usage
@@ -46,7 +46,7 @@ heroicons_outline:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     color:
       title: Stroke color
       type: "string"
@@ -65,8 +65,8 @@ heroicons_outline:
       viewBox="0 0 24 24"
       stroke="{{ color|default('currentColor') }}"
       stroke-width="{{ stroke_width|default(1.5) }}"
-      width="{{ size|default(24) }}"
-      height="{{ size|default(24) }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
     >
       {{ content }}
     </svg>

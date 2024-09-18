@@ -18,9 +18,10 @@ octicons:
         - 12
         - 16
         - 24
+        - 32
         - 48
         - 96
-      default: 24
+      default: 32
     color:
       title: "Color"
       type: "string"
@@ -32,8 +33,8 @@ octicons:
   template: >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="{{ size|default(24) }}"
-      height="{{ size|default(24) }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
       viewBox="0 0 24 24"
       fill="{{ color|default('currentColor') }}"
       {% if alt %}

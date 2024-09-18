@@ -14,7 +14,7 @@ feather:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     color:
       title: "Color"
       type: "string"
@@ -42,8 +42,8 @@ feather:
   template: >
     <svg
       viewBox="0 0 24 24"
-      width="{{ size|default(24) }}"
-      height="{{ size|default(24) }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
       stroke-width="{{ width|default(2) }}"
@@ -71,7 +71,7 @@ feather_sprite:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     color:
       title: "Color"
       type: "string"
@@ -99,8 +99,8 @@ feather_sprite:
   template: >
     <svg
       viewBox="0 0 24 24"
-      width="{{ size|default(24) }}"
-      height="{{ size|default(24) }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
       stroke-width="{{ width|default(2) }}"

@@ -8,7 +8,7 @@ dsfr_svg:
   extractor: svg
   config:
     sources:
-      - /dsfr/node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+      - node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
   settings:
     size:
       title: "Size"
@@ -41,7 +41,7 @@ dsfr:
   extractor: svg
   config:
     sources:
-      - /dsfr/node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+      - node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
   template: >
     <span class="fr-icon-{{ icon_id }}" aria-hidden="true"></span>
   library: ui_icons_dsfr/dsfr_icons

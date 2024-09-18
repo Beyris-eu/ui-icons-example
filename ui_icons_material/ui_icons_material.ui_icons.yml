@@ -1,6 +1,6 @@
-material_filled:
+material:
   enabled: true
-  label: Material filled
+  label: Material
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
@@ -12,16 +12,16 @@ material_filled:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
+    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
 
 material_outlined:
-  enabled: true
+  enabled: false
   label: Material outlined
   description: Latest optimized SVGs for material design icons.
   links:
@@ -34,16 +34,16 @@ material_outlined:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
+    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
 
 material_round:
-  enabled: true
+  enabled: false
   label: Material round
   description: Latest optimized SVGs for material design icons.
   links:
@@ -56,16 +56,16 @@ material_round:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
+    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
 
 material_sharp:
-  enabled: true
+  enabled: false
   label: Material sharp
   description: Latest optimized SVGs for material design icons.
   links:
@@ -78,16 +78,16 @@ material_sharp:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
+    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
 
 material_two_tone:
-  enabled: true
+  enabled: false
   label: Material two-tone
   description: Latest optimized SVGs for material design icons.
   links:
@@ -100,10 +100,10 @@ material_two_tone:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(24) }}" height="{{ size|default(24) }}">
+    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">

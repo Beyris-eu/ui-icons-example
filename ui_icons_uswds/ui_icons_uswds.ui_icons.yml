@@ -16,6 +16,12 @@ uswds_sprite:
       type: "integer"
       default: 32
   template: >
-    <svg class="usa-icon" aria-hidden="true" focusable="false" role="img" width="{{ width|default(32) }}" height="{{ height|default(32) }}">
+    <svg
+      class="usa-icon"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      fill="currentColor"
+      aria-hidden="true"
+    >
       <use xlink:href="{{ source }}#{{ icon_id }}"/>
     </svg>

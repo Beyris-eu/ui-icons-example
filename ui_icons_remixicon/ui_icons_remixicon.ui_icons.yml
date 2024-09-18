@@ -14,11 +14,12 @@ remixicon:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
       enum:
         - 12
         - 16
         - 18
+        - 24
         - 32
         - 36
         - 48
@@ -32,7 +33,7 @@ remixicon:
       type: string
       format: color
   template: >
-    <svg class="remix" viewBox="0 0 24 24" width="{{ size|default(24) }}" height="{{ size|default(24) }}"{% if color %} fill="{{ color }}"{% endif %}>
+    <svg class="remix" viewBox="0 0 24 24" width="{{ size|default(32) }}" height="{{ size|default(32) }}"{% if color %} fill="{{ color }}"{% endif %}>
       {{ content }}
     </svg>
 
@@ -52,7 +53,7 @@ remixicon_sprite:
     size:
       title: "Size"
       type: "integer"
-      default: 24
+      default: 32
       enum:
         - 12
         - 16
@@ -70,6 +71,6 @@ remixicon_sprite:
       type: string
       format: color
   template: >
-    <svg class="remix" width="{{ size|default(24) }}" height="{{ size|default(24) }}"{% if color %} fill="{{ color }}"{% endif %}>
+    <svg class="remix" width="{{ size|default(32) }}" height="{{ size|default(32) }}"{% if color %} fill="{{ color }}"{% endif %}>
       <use xlink:href="{{ source }}#{{ icon_id }}"></use>
     </svg>
