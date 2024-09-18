@@ -8,11 +8,14 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-Install [Font Awesome For The Web](https://fontawesome.com/download) in your libraries folder under Drupal web directory.
+Download and extract [Font Awesome For The Web](https://fontawesome.com/download)
 
 So your folder structure is:
 
-libraries
-  └── fontawesome
-      └── svgs
-        └── _GROUP_
+```
+fontawesome
+  └── svgs
+    └── _GROUP_
+  └── sprites
+    └── SVG sprite files
+```

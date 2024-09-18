@@ -1,0 +1,8 @@
+{
+  "name": "uswds",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "@uswds/uswds": "^3.8.1"
+  }
+}

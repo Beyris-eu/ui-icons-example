@@ -8,7 +8,8 @@ bootstrap:
   extractor: svg_sprite
   config:
     sources:
-      - /libraries/bootstrap-icons/node_modules/bootstrap-icons/bootstrap-icons.svg
+      - bootstrap-icons/node_modules/bootstrap-icons/bootstrap-icons.svg
+      # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/bootstrap-icons.svg
   settings:
     size:
       title: "Size"
@@ -44,7 +45,8 @@ bootstrap_svg:
   extractor: svg
   config:
     sources:
-      - /libraries/bootstrap-icons/node_modules/bootstrap-icons/icons/{icon_id}.svg
+      - bootstrap-icons/node_modules/bootstrap-icons/icons/{icon_id}.svg
+      # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/icons/{icon_id}.svg
   settings:
     size:
       title: "Size"

@@ -1,26 +1,81 @@
-ui_icons_font_awesome_svg:
-  label: Font Awesome
-  description: Font Awesome icons from SVG sources.
+font_awesome:
+  enabled: true
+  label: "Font Awesome"
+  description: "Font Awesome icons from SVG sources."
+  links:
+    - https://docs.fontawesome.com/web/add-icons/svg-bare
+  version: 6.6.0
   extractor: svg
   config:
     sources:
-      - /libraries/fontawesome/svgs/{group}/{icon_id}.svg
+      - svgs/{group}/{icon_id}.svg
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
       default: 32
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
-      default: 32
-    title:
-      title: "Title"
-      type: "string"
-      description: "Set a title on hover for this icon."
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      class="icon icon-{{ icon_id|clean_class }}"
+      height="{{ size|default(32) }}"
+      width="{{ size|default(32) }}"
+      aria-hidden="true"
+      focusable="false"
+    >
+      {{ content }}
+    </svg>
+
+font_awesome_sprite:
+  enabled: false
+  label: "Font Awesome"
+  description: "Font Awesome icons from SVG sprites."
+  links:
+    - https://docs.fontawesome.com/web/add-icons/svg-bare
+  version: 6.6.0
+  extractor: svg
+  config:
+    sources:
+      - sprites/brands.svg
+      - sprites/regular.svg
+      - sprites/solid.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      class="icon icon-{{ icon_id|clean_class }}"
+      height="{{ size|default(32) }}"
+      width="{{ size|default(32) }}"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <use xlink:href="{{ source }}#{{ icon_id }}"/>
+    </svg>
+
+font_awesome_names:
+  enabled: false
+  label: "Font Awesome"
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+  links:
+    - https://docs.fontawesome.com/web/add-icons/svg-unicodes
+  version: 6.6.0
+  extractor: svg
+  config:
+    sources:
+      - svgs/{group}/{icon_id}.svg
+  template: >
+    <i class="fa-solid fa-{{ icon_id }}"></i>

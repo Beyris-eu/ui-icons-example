@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_material",
+  "version": "1.0.0",
+  "license": "ISC",
+  "dependencies": {
+    "@material-design-icons/svg": "^0.14.13"
+  }
+}

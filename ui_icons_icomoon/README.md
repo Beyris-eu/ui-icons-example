@@ -9,13 +9,13 @@ See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
 Download [IcoMoon](https://icomoon.io/app/#/select/library) selection as svg in
-your libraries folder under Drupal web directory.
+this module.
 Place each package in it's own package name folder that will be used as group.
 
 So your folder structure is:
 
-libraries
-  └── icomoon
-      └── _PACKAGE_NAME_
-        └── SVG
-            └── ...svg files
+```
+icomoon
+  └── _PACKAGE_NAME_
+    └── ...svg files
+```

@@ -8,21 +8,18 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-Install [USWDS](https://www.npmjs.com/package/@uswds/uswds) in your libraries folder under Drupal web directory.
+Install [USWDS](https://www.npmjs.com/package/@uswds/uswds) in this module.
 
 ```shell
-mkdir -p libraries/uswds
-cd libraries/uswds
-npm init -y
-npm i @uswds/uswds
+npm install
 ```
 
 So your folder structure is:
 
-libraries
-  └── uswds
-      └── node_modules
-          └── @uswds
-              └── uswds
-                  └── dist
-                      └── img
+```
+node_modules
+  └── @uswds
+    └── uswds
+      └── dist
+        └── img
+```

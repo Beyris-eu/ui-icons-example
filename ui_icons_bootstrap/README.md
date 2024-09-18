@@ -8,7 +8,26 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-Install [Bootstrap icons](https://icons.getbootstrap.com) in your libraries folder under Drupal web directory.
+### Option 1
+
+Install [Bootstrap icons](https://icons.getbootstrap.com) in this module.
+
+```shell
+npm install bootstrap-icons
+```
+
+So your folder structure is:
+
+```
+└── node_modules
+  └── bootstrap-icons
+    └── icons
+```
+
+## Option 2
+
+Install [Bootstrap icons](https://icons.getbootstrap.com) in the Drupal
+libraries folder under Drupal web directory.
 
 ```shell
 mkdir -p libraries/bootstrap-icons
@@ -19,8 +38,8 @@ npm i bootstrap-icons
 
 So your folder structure is:
 
-libraries
+```
+└── node_modules
   └── bootstrap-icons
-    └── node_modules
-      └── bootstrap-icons
-        └── icons
+    └── icons
+```

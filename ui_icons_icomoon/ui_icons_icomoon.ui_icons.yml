@@ -1,26 +1,40 @@
-ui_icons_icomoon_svg:
+icomoon:
+  enabled: true
   label: IcoMoon
-  description: IcoMoon icons from SVG sources.
+  description: "Personalize your designs."
+  links:
+    - https://icomoon.io/
   extractor: svg
   config:
     sources:
-      - /libraries/icomoon/{group}/{icon_id}.svg
+      - icomoon/{group}/{icon_id}.svg
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
       default: 32
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
+  template: >
+    <svg class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
+      {{ content }}
+    </svg>
+
+icomoon_sprite:
+  enabled: false
+  label: IcoMoon
+  description: "Personalize your designs."
+  links:
+    - https://icomoon.io/
+    - https://icomoon.io/docs#inline-svg
+  extractor: svg_sprite
+  config:
+    sources:
+      - icomoon/symbol-defs.svg
+  settings:
+    size:
+      title: "Size"
       type: "integer"
       default: 32
-    title:
-      title: "Title"
-      type: "string"
-      description: "Set a title on hover for this icon."
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg viewBox="0 0 32 32" class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
+      <use xlink:href="{{ source }}#{{ icon_id }}"></use>
+    </svg>

@@ -1,14 +1,15 @@
-feather_svg:
-  label: Feather [SVG]
+feather:
+  enabled: true
+  label: "Feather"
   description: "Feather icons from SVG sources."
   links:
     - https://feathericons.com/
     - https://github.com/feathericons/feather?tab=readme-ov-file#svg-sprite
-  version: v4.29.2
+  version: 4.29.2
   extractor: svg
   config:
     sources:
-      - /libraries/feather/{icon_id}.svg
+      - node_modules/feather-icons/dist/icons/{icon_id}.svg
   settings:
     size:
       title: "Size"
@@ -18,6 +19,26 @@ feather_svg:
       title: "Color"
       type: "string"
       format: "color"
+    width:
+      title: "Stroke width"
+      type: "integer"
+      default: 2
+    linecap:
+      title: "Stroke linecap"
+      type: "string"
+      enum: ['butt', 'round', 'square']
+      default: 'butt'
+    linejoin:
+      title: "Stroke linejoin"
+      type: "string"
+      enum: ['arcs', 'bevel', 'miter', 'miter-clip', 'round']
+      default: 'miter'
+    opacity:
+      title: "Stroke opacity"
+      type: "integer"
+      multipleOf: 0.1
+      minimum: 0.1
+      maximum: 1
   template: >
     <svg
       viewBox="0 0 24 24"
@@ -25,24 +46,27 @@ feather_svg:
       height="{{ size|default(24) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      stroke-width="{{ width|default(2) }}"
+      stroke-linecap="{{ linecap|default('butt') }}"
+      stroke-linejoin="{{ linejoin|default('miter') }}"
+      {% if opacity %}stroke-opacity="{{ opacity }}"{% endif %}
     >
       {{ content }}
     </svg>
 
-feather_svg_sprite:
+feather_sprite:
+  enabled: false
   label: Feather [Sprite]
-  description: "Feather icons from SVG Sprite CDN."
+  description: "Feather icons from SVG Sprite."
   links:
     - https://feathericons.com/
     - https://github.com/feathericons/feather?tab=readme-ov-file#svg-sprite
-  version: v4.29.2
+  version: 4.29.2
   extractor: svg_sprite
   config:
     sources:
-      - https://unpkg.com/feather-icons/dist/feather-sprite.svg
+      # - node_modules/feather-icons/dist/feather-sprite.svg
+      - feather-sprite.svg
   settings:
     size:
       title: "Size"
@@ -52,15 +76,37 @@ feather_svg_sprite:
       title: "Color"
       type: "string"
       format: "color"
+    width:
+      title: "Stroke width"
+      type: "integer"
+      default: 2
+    linecap:
+      title: "Stroke linecap"
+      type: "string"
+      enum: ['butt', 'round', 'square']
+      default: 'butt'
+    linejoin:
+      title: "Stroke linejoin"
+      type: "string"
+      enum: ['arcs', 'bevel', 'miter', 'miter-clip', 'round']
+      default: 'miter'
+    opacity:
+      title: "Stroke opacity"
+      type: "integer"
+      multipleOf: 0.1
+      minimum: 0.1
+      maximum: 1
   template: >
     <svg
-      width="{{ size }}"
-      height="{{ size }}"
+      viewBox="0 0 24 24"
+      width="{{ size|default(24) }}"
+      height="{{ size|default(24) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      stroke-width="{{ width|default(2) }}"
+      stroke-linecap="{{ linecap|default('butt') }}"
+      stroke-linejoin="{{ linejoin|default('miter') }}"
+      {% if opacity %}stroke-opacity="{{ opacity }}"{% endif %}
     >
-      <use href="{{ source }}" />
+      <use xlink:href="{{ source }}#{{ icon_id }}"/>
     </svg>

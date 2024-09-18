@@ -8,20 +8,17 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-Install [Remix icon](https://remixicon.com/download) in your libraries folder under Drupal web directory.
+Install [Remix icon](https://remixicon.com/download) in this module.
 
 ```shell
-mkdir -p libraries/remixicon
-cd libraries/remixicon
-npm init -y
-npm i remixicon
+npm install
 ```
 
 So your folder structure is:
 
-libraries
+```
+node_modules
   └── remixicon
-      └── node_modules
-          └── remixicon
-            └── icons
-              └── _GROUP_
+    └── icons
+      └── _GROUP_
+```

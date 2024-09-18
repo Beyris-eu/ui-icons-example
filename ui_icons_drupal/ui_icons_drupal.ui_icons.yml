@@ -21,6 +21,7 @@ drupal:
       - /core/misc/{icon_id}.gif
       - /core/tests/fixtures/files/{icon_id}.gif
   settings:
+    # Because we can have wild icons not with a square ratio, do not use size.
     width:
       title: "Width"
       description: "Set a width for this icon."

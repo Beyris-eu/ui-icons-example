@@ -8,23 +8,20 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-Install [Heroicons](https://www.npmjs.com/package/heroicons) in your libraries folder under Drupal web directory.
+Install [Heroicons](https://www.npmjs.com/package/heroicons) in this module.
 
 ```shell
-mkdir -p libraries/heroicons
-cd libraries/heroicons
-npm init -y
-npm i heroicons
+npm install
 ```
 
 So your folder structure is:
 
-libraries
+```
+└── node_modules
   └── heroicons
-      └── node_modules
-          └── heroicons
-            └── 24
-              └── solid
-                └── _SVG_
-              └── outline
-                └── _SVG_
+    └── 24
+      └── solid
+        └── _SVG_
+      └── outline
+        └── _SVG_
+```

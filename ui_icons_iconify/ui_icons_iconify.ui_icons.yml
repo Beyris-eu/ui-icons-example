@@ -1,5 +1,5 @@
 # Collections from https://icon-sets.iconify.design/
-ui_icons_iconify_flags:
+iconify_flags:
   label: Flags
   enabled: true
   extractor: iconify
@@ -7,15 +7,10 @@ ui_icons_iconify_flags:
     collections:
       - flag
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
-      default: 24
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
+      default: 32
     flip:
       title: "Flip"
       type: "text"
@@ -34,14 +29,14 @@ ui_icons_iconify_flags:
         - 270deg
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
-ui_icons_iconify_circle_flags:
+iconify_circle_flags:
   label: Circle flags
   enabled: true
   extractor: iconify
@@ -49,15 +44,10 @@ ui_icons_iconify_circle_flags:
     collections:
       - circle-flags
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
-      default: 24
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
+      default: 32
     flip:
       title: "Flip"
       type: "text"
@@ -76,14 +66,14 @@ ui_icons_iconify_circle_flags:
         - 270deg
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
-ui_icons_iconify_geo:
+iconify_geo:
   label: Geo
   enabled: true
   extractor: iconify
@@ -92,15 +82,10 @@ ui_icons_iconify_geo:
       - geo
       - gis
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
-      default: 24
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
+      default: 32
     flip:
       title: "Flip"
       type: "text"
@@ -123,15 +108,15 @@ ui_icons_iconify_geo:
       format: "color"
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip,
       color: color
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
-ui_icons_iconify_animated:
+iconify_animated:
   label: Animated
   enabled: true
   extractor: iconify
@@ -141,15 +126,10 @@ ui_icons_iconify_animated:
       - meteocons
       - svg-spinners
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
-      default: 24
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
+      default: 32
     flip:
       title: "Flip"
       type: "text"
@@ -172,15 +152,15 @@ ui_icons_iconify_animated:
       format: "color"
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip,
       color: color
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
-ui_icons_iconify_emoji:
+iconify_emoji:
   label: Emoji
   enabled: true
   extractor: iconify
@@ -221,15 +201,15 @@ ui_icons_iconify_emoji:
       format: "color"
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip,
       color: color
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
-ui_icons_iconify_programming:
+iconify_programming:
   label: Programming
   enabled: true
   extractor: iconify
@@ -270,8 +250,8 @@ ui_icons_iconify_programming:
       format: "color"
   template: >
     {% set params = {
-      width: width,
-      height: height,
+      width: size,
+      height: size,
       rotate: rotate,
       flip: flip,
       color: color
