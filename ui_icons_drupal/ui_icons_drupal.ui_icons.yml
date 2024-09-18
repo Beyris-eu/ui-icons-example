@@ -1,0 +1,55 @@
+drupal:
+  label: Drupal core Icons
+  description: Drupal core icons available within Drupal.
+  extractor: path
+  config:
+    sources:
+      - /core/misc/icons/{group}/{icon_id}.svg
+      - /core/themes/claro/images/icons/{group}/{icon_id}.svg
+      - /core/themes/claro/images/shortcut/{icon_id}.svg
+      - /core/themes/claro/images/src/{icon_id}.svg
+      - /core/themes/olivero/images/{icon_id}.svg
+      - /core/profiles/demo_umami/themes/umami/components/header/icons/{icon_id}.svg
+      - /core/misc/{icon_id}.png
+      - /core/modules/media/images/icons/{icon_id}.png
+      - /core/profiles/demo_umami/themes/umami/images/classy/icons/{icon_id}.png
+      - /core/tests/fixtures/default_content/file/{icon_id}.png
+      - /core/profiles/demo_umami/themes/umami/images/classy/icons/{icon_id}.png
+      - /core/themes/claro/images/classy/icons/{icon_id}.png
+      - /core/themes/starterkit_theme/images/icons/{icon_id}.png
+      - /core/misc/icons/{icon_id}.gif
+      - /core/misc/{icon_id}.gif
+      - /core/tests/fixtures/files/{icon_id}.gif
+  settings:
+    width:
+      title: "Width"
+      description: "Set a width for this icon."
+      type: "integer"
+      default: 32
+    height:
+      title: "Height"
+      description: "Set a height for this icon."
+      type: "integer"
+      default: 32
+    title:
+      title: "Semantic title"
+      type: "string"
+      description: "If this icon convey meaning, provide text-based alternatives, leave empty for decorative icon."
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <img
+      class="icon icon-{{ icon_id|clean_class }}"
+      src="{{ source }}"
+      width="{{ width|default(32) }}"
+      height="{{ height|default(32) }}"
+      alt="{{ alt }}"
+      {% if alt is empty %}
+        role="presentation"
+        aria-hidden="true"
+      {% elseif title %}
+        title="{{ title }}"
+      {% endif %}
+    >

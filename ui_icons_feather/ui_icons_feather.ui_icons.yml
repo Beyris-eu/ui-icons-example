@@ -1,0 +1,66 @@
+feather_svg:
+  label: Feather [SVG]
+  description: "Feather icons from SVG sources."
+  links:
+    - https://feathericons.com/
+    - https://github.com/feathericons/feather?tab=readme-ov-file#svg-sprite
+  version: v4.29.2
+  extractor: svg
+  config:
+    sources:
+      - /libraries/feather/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+  template: >
+    <svg
+      viewBox="0 0 24 24"
+      width="{{ size|default(24) }}"
+      height="{{ size|default(24) }}"
+      fill="none"
+      stroke="{{ color|default('currentColor') }}"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      {{ content }}
+    </svg>
+
+feather_svg_sprite:
+  label: Feather [Sprite]
+  description: "Feather icons from SVG Sprite CDN."
+  links:
+    - https://feathericons.com/
+    - https://github.com/feathericons/feather?tab=readme-ov-file#svg-sprite
+  version: v4.29.2
+  extractor: svg_sprite
+  config:
+    sources:
+      - https://unpkg.com/feather-icons/dist/feather-sprite.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+  template: >
+    <svg
+      width="{{ size }}"
+      height="{{ size }}"
+      fill="none"
+      stroke="{{ color|default('currentColor') }}"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <use href="{{ source }}" />
+    </svg>

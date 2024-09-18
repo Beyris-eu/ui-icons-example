@@ -1,0 +1,46 @@
+dsfr_svg:
+  label: DSFR
+  description: "DSFR icons from SVG files, without DSFR full theme."
+  links:
+    - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
+  version: 1.12.1
+  extractor: svg
+  config:
+    sources:
+      - /libraries/dsfr/node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    alt:
+      title: "Alt text"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+      type: string
+  template: >
+    <img
+      class="icon icon-{{ icon_id|clean_class }}"
+      src="{{ source }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      alt="{{ alt }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% endif %}
+    >
+
+# Global icons usage on a website with DSFR full theme
+dsfr:
+  enabled: false
+  label: DSFR
+  description: "Functional icons are visual symbols that accompany the user in their actions and help them understand the interface."
+  version: 1.12.1
+  links:
+    - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
+  extractor: svg
+  config:
+    sources:
+      - /libraries/dsfr/node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+  template: >
+    <span class="fr-icon-{{ icon_id }}" aria-hidden="true"></span>
+  library: ui_icons_dsfr/dsfr_icons
