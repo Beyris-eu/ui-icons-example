@@ -1,44 +1,14 @@
 font_awesome:
   enabled: true
   label: "Font Awesome"
-  description: "Font Awesome icons from SVG sources."
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
   links:
-    - https://docs.fontawesome.com/web/add-icons/svg-bare
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-sprites
   version: 6.6.0
-  extractor: svg
-  config:
-    sources:
-      - svgs/{group}/{icon_id}.svg
-  settings:
-    size:
-      title: "Size"
-      type: "integer"
-      default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
-      class="icon icon-{{ icon_id|clean_class }}"
-      height="{{ size|default(32) }}"
-      width="{{ size|default(32) }}"
-      aria-hidden="true"
-      focusable="false"
-    >
-      {{ content }}
-    </svg>
-
-font_awesome_sprite:
-  enabled: false
-  label: "Font Awesome"
-  description: "Font Awesome icons from SVG sprites."
-  links:
-    - https://docs.fontawesome.com/web/add-icons/svg-bare
-  version: 6.6.0
-  extractor: svg
+  license: Font Awesome Free License
+  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  extractor: svg_sprite
   config:
     sources:
       - sprites/brands.svg
@@ -56,26 +26,72 @@ font_awesome_sprite:
   template: >
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
       width="{{ size|default(32) }}"
-      aria-hidden="true"
-      focusable="false"
+      {% if alt is empty %}
+        aria-hidden="true"
+        focusable="false"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
     >
       <use xlink:href="{{ source }}#{{ icon_id }}"/>
     </svg>
 
-font_awesome_names:
+font_awesome_svg:
   enabled: false
   label: "Font Awesome"
   description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
   links:
-    - https://docs.fontawesome.com/web/add-icons/svg-unicodes
+    - https://fontawesome.com/icons
+    - https://docs.fontawesome.com/web/add-icons/svg-bare
   version: 6.6.0
+  license: Font Awesome Free License
+  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
   extractor: svg
   config:
     sources:
       - svgs/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <i class="fa-solid fa-{{ icon_id }}"></i>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 512 512"
+      class="icon icon-{{ icon_id|clean_class }}"
+      height="{{ size|default(32) }}"
+      width="{{ size|default(32) }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+        focusable="false"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      {{ content }}
+    </svg>
+
+# @todo when font extrcator is available.
+# font_awesome_names:
+#   enabled: false
+#   label: "Font Awesome"
+#   description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+#   links:
+#     - https://docs.fontawesome.com/web/setup/host-yourself/webfonts
+#   version: 6.6.0
+#   license: Font Awesome Free License
+#   license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+#   extractor: font
+#   config:
+#     sources:
+#       - svgs/{group}/{icon_id}.svg
+#   template: >
+#     <i class="fa-solid fa-{{ icon_id }}"></i>

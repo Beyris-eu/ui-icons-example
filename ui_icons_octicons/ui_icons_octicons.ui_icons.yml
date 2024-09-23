@@ -1,11 +1,13 @@
 octicons:
-  enabled: true
+  enabled: false
   label: Octicons
-  version: 19.11.0
   description: "A scalable set of icons handcrafted by GitHub."
   links:
     - https://primer.style/foundations/icons
     - https://github.com/primer/octicons
+  version: 19.11.0
+  license: MIT
+  license_url: https://github.com/primer/octicons/blob/main/LICENSE
   extractor: svg
   config:
     sources:

@@ -3,7 +3,7 @@ icomoon:
   label: IcoMoon
   description: "Personalize your designs."
   links:
-    - https://icomoon.io/
+    - https://icomoon.io
   extractor: svg
   config:
     sources:
@@ -23,7 +23,7 @@ icomoon_sprite:
   label: IcoMoon
   description: "Personalize your designs."
   links:
-    - https://icomoon.io/
+    - https://icomoon.io
     - https://icomoon.io/docs#inline-svg
   extractor: svg_sprite
   config:

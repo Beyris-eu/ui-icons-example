@@ -1,11 +1,13 @@
 remixicon:
-  enabled: true
+  enabled: false
   label: Remix
-  version: 4.3.0
   description: "Open-source neutral-style system symbols elaborately crafted for designers and developers."
   links:
-    - https://remixicon.com/
+    - https://remixicon.com
     - https://github.com/Remix-Design/RemixIcon
+  version: 4.3.0
+  license: Apache-2.0
+  license_url: https://github.com/Remix-Design/RemixIcon/blob/master/License
   extractor: svg
   config:
     sources:
@@ -40,11 +42,13 @@ remixicon:
 remixicon_sprite:
   enabled: false
   label: Remix
-  version: 4.3.0
   description: "Open-source neutral-style system symbols elaborately crafted for designers and developers."
   links:
     - https://remixicon.com/
     - https://github.com/Remix-Design/RemixIcon
+  version: 4.3.0
+  license: Apache-2.0
+  license_url: https://github.com/Remix-Design/RemixIcon/blob/master/License
   extractor: svg_sprite
   config:
     sources:

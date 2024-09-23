@@ -19,3 +19,15 @@ fontawesome
   └── sprites
     └── SVG sprite files
 ```
+
+Font version must include other folders from downloaded Font Awesome:
+
+_Note_: when font extrcator is available.
+
+```
+fontawesome
+  └── css
+    └── _FILES_
+  └── webfonts
+    └── _FILES_
+```

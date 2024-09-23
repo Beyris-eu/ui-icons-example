@@ -1,0 +1,6 @@
+font_awesome_icons:
+  version: VERSION
+  css:
+    component:
+      # Relative to this file.
+      css/fontawesome.min.css: {}

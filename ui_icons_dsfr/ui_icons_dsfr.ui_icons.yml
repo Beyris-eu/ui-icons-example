@@ -5,6 +5,8 @@ dsfr_svg:
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
+  license: MIT
+  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
   extractor: svg
   config:
     sources:
@@ -35,9 +37,11 @@ dsfr:
   enabled: false
   label: DSFR
   description: "Functional icons are visual symbols that accompany the user in their actions and help them understand the interface."
-  version: 1.12.1
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
+  version: 1.12.1
+  license: MIT
+  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
   extractor: svg
   config:
     sources:

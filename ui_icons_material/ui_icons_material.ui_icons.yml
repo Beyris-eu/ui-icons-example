@@ -1,9 +1,12 @@
 material:
-  enabled: true
+  enabled: false
   label: Material
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
+  version: 0.14.13
+  license: Apache-2.0
+  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:
@@ -26,6 +29,9 @@ material_outlined:
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
+  version: 0.14.13
+  license: Apache-2.0
+  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:
@@ -48,6 +54,9 @@ material_round:
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
+  version: 0.14.13
+  license: Apache-2.0
+  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:
@@ -70,6 +79,9 @@ material_sharp:
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
+  version: 0.14.13
+  license: Apache-2.0
+  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:
@@ -92,6 +104,9 @@ material_two_tone:
   description: Latest optimized SVGs for material design icons.
   links:
     - https://github.com/marella/material-design-icons
+  version: 0.14.13
+  license: Apache-2.0
+  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:

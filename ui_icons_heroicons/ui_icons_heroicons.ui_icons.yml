@@ -1,11 +1,13 @@
 heroicons:
   enabled: true
   label: Hero
-  version: 2.1.5
   description: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS."
   links:
     - https://heroicons.com/solid
     - https://github.com/tailwindlabs/heroicons/?tab=readme-ov-file#basic-usage
+  version: 2.1.5
+  license: MIT
+  license_url: https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
   extractor: svg
   config:
     sources:
@@ -31,13 +33,15 @@ heroicons:
     </svg>
 
 heroicons_outline:
-  enabled: false
+  enabled: true
   label: Hero outline
-  version: 2.1.5
   description: "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS."
   links:
     - https://heroicons.com/outline
     - https://github.com/tailwindlabs/heroicons/?tab=readme-ov-file#basic-usage
+  version: 2.1.5
+  license: MIT
+  license_url: https://github.com/tailwindlabs/heroicons/blob/master/LICENSE
   extractor: svg
   config:
     sources:

@@ -1,7 +1,10 @@
 drupal:
-  enabled: true
+  enabled: false
   label: "Drupal core Icons"
   description: "Drupal core icons available within Drupal."
+  version: 11
+  license: GPL2-or-later
+  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
   extractor: path
   config:
     sources:

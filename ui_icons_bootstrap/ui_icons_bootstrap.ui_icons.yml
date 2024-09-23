@@ -5,10 +5,13 @@ bootstrap:
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
+  license: MIT
+  license_url: https://github.com/twbs/icons/blob/main/LICENSE
   extractor: svg_sprite
   config:
     sources:
       - node_modules/bootstrap-icons/bootstrap-icons.svg
+      # Or path in libraries relative to Drupal root web folder.
       # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/bootstrap-icons.svg
   settings:
     size:
@@ -34,18 +37,20 @@ bootstrap:
       <use xlink:href="{{ source }}#{{ icon_id }}"/>
     </svg>
 
-# Example with local SVG files.
 bootstrap_svg:
   enabled: false
-  label: "Bootstrap"
+  label: "Bootstrap [SVG]"
   description: "Bootstrap icons from SVG files."
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
+  license: MIT
+  license_url: https://github.com/twbs/icons/blob/main/LICENSE
   extractor: svg
   config:
     sources:
       - node_modules/bootstrap-icons/icons/{icon_id}.svg
+      # Or path in libraries relative to Drupal root web folder.
       # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/icons/{icon_id}.svg
   settings:
     size:
