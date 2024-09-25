@@ -1,5 +1,5 @@
 drupal:
-  enabled: false
+  enabled: true
   label: "Drupal core Icons"
   description: "Drupal core icons available within Drupal."
   version: 11
