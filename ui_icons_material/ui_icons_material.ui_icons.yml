@@ -1,124 +1,51 @@
 material:
-  enabled: false
+  enabled: true
   label: Material
   description: Latest optimized SVGs for material design icons.
   links:
-    - https://github.com/marella/material-design-icons
-  version: 0.14.13
+    - https://github.com/google/material-design-icons
+  version: 4.0.0
   license: Apache-2.0
-  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
-  extractor: svg
+  license_url: https://github.com/google/material-design-icons/blob/master/LICENSE
+  extractor: font
   config:
     sources:
-      - node_modules/@material-design-icons/svg/filled/{icon_id}.svg
+      - fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints
   settings:
     size:
       title: "Size"
       type: "integer"
       default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
-
-material_outlined:
-  enabled: false
-  label: Material outlined
-  description: Latest optimized SVGs for material design icons.
-  links:
-    - https://github.com/marella/material-design-icons
-  version: 0.14.13
-  license: Apache-2.0
-  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
-  extractor: svg
-  config:
-    sources:
-      - node_modules/@material-design-icons/svg/outlined/{icon_id}.svg
-  settings:
-    size:
-      title: "Size"
+    fill:
+      title: "Fill"
       type: "integer"
-      default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
-
-material_round:
-  enabled: false
-  label: Material round
-  description: Latest optimized SVGs for material design icons.
-  links:
-    - https://github.com/marella/material-design-icons
-  version: 0.14.13
-  license: Apache-2.0
-  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
-  extractor: svg
-  config:
-    sources:
-      - node_modules/@material-design-icons/svg/round/{icon_id}.svg
-  settings:
-    size:
-      title: "Size"
+      default: 0
+      minimum: 0
+      maximum: 1
+      multipleOf: 0.1
+    weight:
+      title: "Weight"
       type: "integer"
-      default: 32
-    alt:
-      title: "Alt text"
+      default: 400
+      minimum: 100
+      maximum: 700
+      multipleOf: 50
+    color:
+      title: "Color"
       type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
+      format: "color"
+  library: "ui_icons_material/material_icons"
+  # https://developers.google.com/fonts/docs/material_symbols
   template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
-
-material_sharp:
-  enabled: false
-  label: Material sharp
-  description: Latest optimized SVGs for material design icons.
-  links:
-    - https://github.com/marella/material-design-icons
-  version: 0.14.13
-  license: Apache-2.0
-  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
-  extractor: svg
-  config:
-    sources:
-      - node_modules/@material-design-icons/svg/sharp/{icon_id}.svg
-  settings:
-    size:
-      title: "Size"
-      type: "integer"
-      default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
-
-material_two_tone:
-  enabled: false
-  label: Material two-tone
-  description: Latest optimized SVGs for material design icons.
-  links:
-    - https://github.com/marella/material-design-icons
-  version: 0.14.13
-  license: Apache-2.0
-  license_url: https://github.com/marella/material-design-icons/blob/main/LICENSE
-  extractor: svg
-  config:
-    sources:
-      - node_modules/@material-design-icons/svg/two-tone/{icon_id}.svg
-  settings:
-    size:
-      title: "Size"
-      type: "integer"
-      default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
-    <img class="icon icon-{{ icon_id|clean_class }}" src="{{ source }}" alt="{{ alt }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
+    <span
+      class="material-symbols-outlined"
+      style="
+        font-size:{{ size|default(32) }}px;
+        font-variation-settings: 'FILL' {{ fill|default(0) }}, 'wght' {{ weight|default(400) }};
+        {% if color %} color: {{ color }};{% endif %}
+      "
+    >
+      {{ icon_id }}
+    </span>
+  preview: >
+    <span class="material-symbols-outlined" title="{{ label }}" style="font-size:{{ size|default(48) }}px; line-height: {{ size|default(48) }}px;">&#x{{ content }}</span>

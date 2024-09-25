@@ -11,9 +11,9 @@ font_awesome:
   extractor: svg_sprite
   config:
     sources:
-      - sprites/brands.svg
-      - sprites/regular.svg
-      - sprites/solid.svg
+      - fontawesome-free-6.6.0-web/sprites/brands.svg
+      - fontawesome-free-6.6.0-web/sprites/regular.svg
+      - fontawesome-free-6.6.0-web/sprites/solid.svg
   settings:
     size:
       title: "Size"
@@ -52,7 +52,7 @@ font_awesome_svg:
   extractor: svg
   config:
     sources:
-      - svgs/{group}/{icon_id}.svg
+      - fontawesome-free-6.6.0-web/svgs/{group}/{icon_id}.svg
   settings:
     size:
       title: "Size"
@@ -79,19 +79,40 @@ font_awesome_svg:
       {{ content }}
     </svg>
 
-# @todo when font extrcator is available.
-# font_awesome_names:
-#   enabled: false
-#   label: "Font Awesome"
-#   description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
-#   links:
-#     - https://docs.fontawesome.com/web/setup/host-yourself/webfonts
-#   version: 6.6.0
-#   license: Font Awesome Free License
-#   license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
-#   extractor: font
-#   config:
-#     sources:
-#       - svgs/{group}/{icon_id}.svg
-#   template: >
-#     <i class="fa-solid fa-{{ icon_id }}"></i>
+font_awesome_name:
+  enabled: false
+  label: "Font Awesome"
+  description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
+  links:
+    - https://docs.fontawesome.com/web/add-icons/svg-icon-names
+  version: 6.6.0
+  license: Font Awesome Free License
+  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  extractor: font
+  config:
+    sources:
+      # - fontawesome-free-6.6.0-web/webfonts/fa-brands-400.ttf # brands seems to not work at the moment.
+      - fontawesome-free-6.6.0-web/webfonts/fa-regular-400.ttf
+      - fontawesome-free-6.6.0-web/webfonts/fa-solid-900.ttf
+      # - fontawesome-free-6.6.0-web/metadata/icons.yml
+    offset: 48 # Font include normal characters that we can ignore.
+  # https://docs.fontawesome.com/web/style/styling
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      enum: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      default: 2
+    rotate:
+      title: "Rotate"
+      type: "integer"
+      enum: [0, 90, 180, 270]
+    animate:
+      title: "Animate"
+      type: "string"
+      enum: ["", "beat", "fade", "beat-fade", "bounce", "flip", "shake", "spin", "spin-pulse"]
+  library: "ui_icons_fontawesome/font_awesome_icons"
+  template: >
+    <i class="fa-solid fa-{{ icon_id }} fa-{{ size|default(2) }}x{% if animate %} fa-{{ animate }}{% endif %}{% if rotate and rotate != 0 %} fa-rotate-{{ rotate }}{% endif %}"></i>
+  preview: >
+    <i class="fa-solid fa-{{ icon_id }}" title="{{ label }}" style="font-size: {{ size|default(48) }}px; line-height: {{ size|default(48) }}px;"></i>

@@ -1,8 +1,0 @@
-{
-  "name": "ui_icons_material",
-  "private": true,
-  "license": "ISC",
-  "dependencies": {
-    "@material-design-icons/svg": "^0.14.13"
-  }
-}

@@ -115,3 +115,33 @@ feather_sprite:
     >
       <use href="{{ source }}#{{ icon_id }}" />
     </svg>
+
+# Not recommended as this will not work with CKEditor plugin.
+feather_names:
+  enabled: false
+  label: Feather
+  description: "Feather icons - Simply beautiful open source icons."
+  links:
+    - https://feathericons.com/
+    - https://github.com/feathericons/feather?tab=readme-ov-file
+  version: 4.29.2
+  license: MIT
+  license_url: https://github.com/feathericons/feather/blob/main/LICENSE
+  extractor: font
+  config:
+    sources:
+      - node_modules/feather-icons/dist/icons.json
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+  library: 'ui_icons_feather/feather_icons'
+  template: >
+    <i data-feather="{{ icon_id }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}" style="font-size: {{ size|default(32) }}px;{% if color %}color: {{ color }};{% endif %}"></i>
+  preview: >
+    <i data-feather="{{ icon_id }}" title="{{ label }}" width="{{ size|default(48) }}" height="{{ size|default(48) }}"></i>

@@ -1,5 +1,5 @@
 remixicon:
-  enabled: false
+  enabled: true
   label: Remix
   description: "Open-source neutral-style system symbols elaborately crafted for designers and developers."
   links:

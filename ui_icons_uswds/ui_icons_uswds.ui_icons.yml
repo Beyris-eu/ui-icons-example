@@ -1,5 +1,5 @@
-uswds_sprite:
-  enabled: false
+uswds:
+  enabled: true
   label: USWDS
   description: "Icons help communicate meaning, actions, status, or feedback."
   links:

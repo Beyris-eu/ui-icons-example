@@ -1,5 +1,5 @@
 octicons:
-  enabled: false
+  enabled: true
   label: Octicons
   description: "A scalable set of icons handcrafted by GitHub."
   links:

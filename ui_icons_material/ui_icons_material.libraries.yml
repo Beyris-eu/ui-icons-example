@@ -1,0 +1,6 @@
+material_icons:
+  version: VERSION
+  css:
+    component:
+      # https://developers.google.com/fonts/docs/material_symbols
+      https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1: {}

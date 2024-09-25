@@ -13,21 +13,15 @@ Download and extract [Font Awesome For The Web](https://fontawesome.com/download
 So your folder structure is:
 
 ```
-fontawesome
+fontawesome-free-6.6.0-web
   └── svgs
     └── _GROUP_
   └── sprites
     └── SVG sprite files
-```
-
-Font version must include other folders from downloaded Font Awesome:
-
-_Note_: when font extrcator is available.
-
-```
-fontawesome
   └── css
     └── _FILES_
   └── webfonts
     └── _FILES_
 ```
+
+_Note_: Depending the version (SVG, Sprite, Font), some folders can be removed.

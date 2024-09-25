@@ -1,0 +1,5 @@
+feather_icons:
+  version: VERSION
+  js:
+    https://unpkg.com/feather-icons: {}
+    js/init-feather-icons.js: {}
