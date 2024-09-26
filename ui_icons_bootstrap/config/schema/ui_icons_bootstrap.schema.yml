@@ -6,6 +6,9 @@ ui_icons.icon_pack_options.bootstrap:
   constraints:
     FullyValidatable: ~
   mapping:
+    color:
+      type: string
+      label: 'Color'
     size:
       type: integer
       label: 'Size'
@@ -22,6 +25,28 @@ ui_icons.icon_pack_options.bootstrap_svg:
   constraints:
     FullyValidatable: ~
   mapping:
+    color:
+      type: string
+      label: 'Color'
+    size:
+      type: integer
+      label: 'Size'
+      constraints:
+        Range:
+          min: 0
+    alt:
+      type: string
+      label: 'Alt text'
+
+ui_icons.icon_pack_options.bootstrap_name:
+  type: mapping
+  label: 'Drupal SVG settings'
+  constraints:
+    FullyValidatable: ~
+  mapping:
+    color:
+      type: string
+      label: 'Color'
     size:
       type: integer
       label: 'Size'
