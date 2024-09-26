@@ -8,22 +8,20 @@ drupal:
   extractor: path
   config:
     sources:
+      - /core/misc/logo/{icon_id}.svg
+      - /core/misc/{icon_id}.gif
+      - /core/misc/{icon_id}.png
       - /core/misc/icons/{group}/{icon_id}.svg
+      - /core/modules/media/images/icons/{icon_id}.png
+      - /core/profiles/demo_umami/themes/umami/components/header/icons/{icon_id}.svg
+      - /core/tests/fixtures/default_content/file/{icon_id}.png
+      - /core/themes/claro/images/classy/icons/{icon_id}.png
       - /core/themes/claro/images/icons/{group}/{icon_id}.svg
       - /core/themes/claro/images/shortcut/{icon_id}.svg
       - /core/themes/claro/images/src/{icon_id}.svg
       - /core/themes/olivero/images/{icon_id}.svg
-      - /core/profiles/demo_umami/themes/umami/components/header/icons/{icon_id}.svg
-      - /core/misc/{icon_id}.png
-      - /core/modules/media/images/icons/{icon_id}.png
-      - /core/profiles/demo_umami/themes/umami/images/classy/icons/{icon_id}.png
-      - /core/tests/fixtures/default_content/file/{icon_id}.png
-      - /core/profiles/demo_umami/themes/umami/images/classy/icons/{icon_id}.png
-      - /core/themes/claro/images/classy/icons/{icon_id}.png
       - /core/themes/starterkit_theme/images/icons/{icon_id}.png
-      - /core/misc/icons/{icon_id}.gif
-      - /core/misc/{icon_id}.gif
-      - /core/tests/fixtures/files/{icon_id}.gif
+
   settings:
     # Because we can have wild icons not with a square ratio, do not use size.
     width:
