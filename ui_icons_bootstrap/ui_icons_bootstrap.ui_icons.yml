@@ -110,6 +110,19 @@ bootstrap_name:
       format: "color"
   library: 'ui_icons_bootstrap/bootstrap_icons'
   template: >
-    <i class="bi-{{ icon_id }}" style="font-size: {{ size|default(32) }}px;{% if color %}color: {{ color }};{% endif %}"></i>
+    <i
+      class="bi-{{ icon_id|clean_class }}"
+      style="
+        font-size: {{ size|default(32) }}px;
+        {% if color %}color: {{ color }};{% endif %}
+      "
+    ></i>
   preview: >
-    <i class="bi-{{ icon_id }}" title="{{ label }}" style="font-size: {{ size|default(48) }}px; line-height: {{ size|default(48) }}px;"></i>
+    <i
+      class="bi-{{ icon_id|clean_class }}"
+      title="{{ label }}"
+      style="
+        font-size: {{ size|default(48) }}px;
+        line-height: {{ size|default(48) }}px;
+      "
+    ></i>
