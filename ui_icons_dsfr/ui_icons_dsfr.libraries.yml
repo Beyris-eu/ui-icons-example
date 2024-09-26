@@ -1,7 +1,13 @@
 dsfr_icons:
   version: VERSION
   css:
-    component:
+    theme:
       # Relative to this file.
       node_modules/@gouvfr/dsfr/dist/core/core.css: {}
       node_modules/@gouvfr/dsfr/dist/utility/icons/icons.css: {}
+
+dsfr_picto:
+  version: VERSION
+  css:
+    theme:
+      node_modules/@gouvfr/dsfr/dist/dsfr.css: {}

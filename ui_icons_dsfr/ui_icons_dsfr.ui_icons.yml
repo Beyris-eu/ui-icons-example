@@ -1,5 +1,5 @@
-dsfr_svg:
-  enabled: true
+dsfr:
+  enabled: false
   label: DSFR
   description: "DSFR icons from SVG files, without DSFR full theme."
   links:
@@ -32,11 +32,10 @@ dsfr_svg:
       {% endif %}
     >
 
-# Global icons usage on a website with DSFR full theme
-dsfr:
-  enabled: false
-  label: DSFR
-  description: "Functional icons are visual symbols that accompany the user in their actions and help them understand the interface."
+dsfr_picto:
+  enabled: true
+  label: DSFR Picto
+  description: "DSFR pictograms from SVG files, with DSFR full theme."
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
@@ -45,7 +44,71 @@ dsfr:
   extractor: svg
   config:
     sources:
-      - node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+      - node_modules/@gouvfr/dsfr/dist/artwork/pictograms/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 80
+    color:
+      title: "Color secondary"
+      type: "integer"
+      enum:
+        - red-marianne
+        - green-tilleul-verveine
+        - green-bourgeon
+        - green-emeraude
+        - green-menthe
+        - green-archipel
+        - blue-ecume
+        - blue-cumulus
+        - purple-glycine
+        - pink-macaron
+        - pink-tuile
+        - yellow-tournesol
+        - yellow-moutarde
+        - orange-terre-battue
+        - brown-cafe-creme
+        - brown-caramel
+        - brown-opera
+        - beige-gris-galet
+      default: "red-marianne"
   template: >
-    <span class="fr-icon-{{ icon_id }}" aria-hidden="true"></span>
+    <svg class="fr-artwork fr-artwork--{{ color }}" aria-hidden="true" viewBox="0 0 80 80" width="{{ size|default(80) }}px" height="{{ size|default(80) }}px">
+      <use class="fr-artwork-decorative" xlink:href="{{ source }}#artwork-decorative"></use>
+      <use class="fr-artwork-minor" xlink:href="{{ source }}#artwork-minor"></use>
+      <use class="fr-artwork-major" xlink:href="{{ source }}#artwork-major"></use>
+    </svg>
+  library: "ui_icons_dsfr/dsfr_picto"
+
+# The theme version must use ckeditor5-stylesheets in _my_theme_.info.yml to
+# work with UI Icons ckeditor5
+# ckeditor5-stylesheets:
+#   - node_modules/@gouvfr/dsfr/dist/core/core.css
+#   - node_modules/@gouvfr/dsfr/dist/utility/icons/icons.css
+dsfr_name:
+  enabled: false
+  label: DSFR
+  description: "Functional icons are visual symbols that accompany the user in their actions and help them understand the interface."
+  links:
+    - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
+  version: 1.12.1
+  license: MIT
+  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+  # No metadata sources for icons, only physical files.
+  extractor: svg
+  config:
+    sources:
+      - node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "string"
+      enum: ['xs', 'md', 'lg']
+      default: 'md'
   library: ui_icons_dsfr/dsfr_icons
+  template: >
+    <span
+      class="fr-icon-{{ icon_id|replace({'fr--': ""})|clean_class }}{% if size != 'md' %} fr-icon--{{ size }}{% endif %}"
+      aria-hidden="true"
+    ></span>

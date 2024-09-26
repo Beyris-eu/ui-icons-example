@@ -24,3 +24,12 @@ So your folder structure is:
         └── icons
           └── _GROUP_
 ```
+
+To use the name version with UI Icons CKEditor5, you must add to your theme the
+corresponding libraries:
+
+```yml
+ckeditor5-stylesheets:
+  - node_modules/@gouvfr/dsfr/dist/core/core.css
+  - node_modules/@gouvfr/dsfr/dist/utility/icons/icons.css
+```
