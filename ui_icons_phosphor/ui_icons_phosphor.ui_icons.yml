@@ -11,7 +11,9 @@ phosphor:
   extractor: svg
   config:
     sources:
-      - node_modules/@phosphor-icons/core/assets/{group}/{icon_id}.svg
+      - node_modules/@phosphor-icons/core/assets/regular/{icon_id}.svg
+      # Or include multiple versions.
+      # - node_modules/@phosphor-icons/core/assets/{regular,thin,duotone}/{icon_id}.svg
   settings:
     size:
       title: "Size"

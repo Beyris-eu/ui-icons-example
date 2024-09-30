@@ -11,7 +11,8 @@ remixicon:
   extractor: svg
   config:
     sources:
-      - node_modules/remixicon/icons/{group}/{icon_id}.svg
+      # Only line sources, could include `-fill` as well or in other definition.
+      - node_modules/remixicon/icons/{group}/{icon_id}-line.svg
   settings:
     size:
       title: "Size"

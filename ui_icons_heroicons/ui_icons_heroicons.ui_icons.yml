@@ -32,6 +32,8 @@ heroicons:
       {{ content }}
     </svg>
 
+# Outline version is not using {group} with solid because of different settings
+# and template.
 heroicons_outline:
   enabled: true
   label: Hero outline
