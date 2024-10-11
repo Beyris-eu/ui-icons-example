@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Heroicons module provider for UI Icons.
+The [Heroicons](https://heroicons.com) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -11,7 +11,7 @@ information.
 Install [Heroicons](https://www.npmjs.com/package/heroicons) in this module.
 
 ```shell
-npm install
+npm i heroicons
 ```
 
 So your folder structure is:

@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Phosphor Icons module provider for UI Icons.
+The [Phosphor Icons](https://phosphoricons.com) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -11,7 +11,7 @@ information.
 Install [Phosphor Icons](https://github.com/phosphor-icons/core) in this module.
 
 ```shell
-npm install
+npm i @phosphor-icons/core
 ```
 
 So your folder structure is:

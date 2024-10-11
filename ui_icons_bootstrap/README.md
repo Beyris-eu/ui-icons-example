@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Bootstrap icons module provider for UI Icons.
+The [Bootstrap icons](https://icons.getbootstrap.com) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -10,10 +10,10 @@ information.
 
 ### Option 1
 
-Install [Bootstrap icons](https://icons.getbootstrap.com) in this module.
+Install [Bootstrap icons](https://www.npmjs.com/package/bootstrap-icons) in this module.
 
 ```shell
-npm install bootstrap-icons
+npm i bootstrap-icons
 ```
 
 So your folder structure is:
@@ -26,13 +26,12 @@ So your folder structure is:
 
 ## Option 2
 
-Install [Bootstrap icons](https://icons.getbootstrap.com) in the Drupal
+Install [Bootstrap icons](https://www.npmjs.com/package/bootstrap-icons) in the Drupal
 libraries folder under Drupal web directory.
 
 ```shell
 mkdir -p libraries/bootstrap-icons
 cd libraries/bootstrap-icons
-npm init -y
 npm i bootstrap-icons
 ```
 

@@ -11,7 +11,7 @@ information.
 Install [USWDS](https://www.npmjs.com/package/@uswds/uswds) in this module.
 
 ```shell
-npm install
+npm i @uswds/uswds
 ```
 
 So your folder structure is:

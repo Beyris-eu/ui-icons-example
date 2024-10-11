@@ -1,7 +1,7 @@
 dsfr:
-  enabled: false
+  enabled: true
   label: DSFR
-  description: "DSFR icons from SVG files, without DSFR full theme."
+  description: "DSFR icons from SVG files, can be used without DSFR full theme."
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
@@ -10,32 +10,43 @@ dsfr:
   extractor: svg
   config:
     sources:
-      - node_modules/@gouvfr/dsfr/dist/icons/{group}/{icon_id}.svg
+      - node_modules/@gouvfr/dsfr/dist/icons/{group}/*.svg
   settings:
     size:
       title: "Size"
       type: "integer"
       default: 32
+    # Random colors are not allowed with DSFR icons rules, this is just an
+    # example.
+    # Icons must use predefined colors as seen in documentation.
+    # https://www.systeme-de-design.gouv.fr/fondamentaux/icone/
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
     alt:
       title: "Alt text"
       description: "Accessibility alternative text, leave empty for decorative icon."
       type: string
   template: >
-    <img
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
       class="icon icon-{{ icon_id|clean_class }}"
-      src="{{ source }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
-      alt="{{ alt }}"
+      fill="{{ color|default(currentColor) }}"
       {% if alt is empty %}
         aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
       {% endif %}
     >
+      {{ content }}
+    </svg>
 
 dsfr_picto:
-  enabled: true
+  enabled: false
   label: DSFR Picto
-  description: "DSFR pictograms from SVG files, with DSFR full theme."
+  description: "DSFR pictograms from SVG files, Must be used with DSFR full theme."
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
@@ -52,7 +63,7 @@ dsfr_picto:
       default: 80
     color:
       title: "Color secondary"
-      type: "integer"
+      type: "string"
       enum:
         - red-marianne
         - green-tilleul-verveine

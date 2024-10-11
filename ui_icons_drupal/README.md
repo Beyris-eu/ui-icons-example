@@ -8,4 +8,4 @@ Install as you would normally install a contributed Drupal module.
 See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
-This module will allow access to most Drupal core icons.
+This module will allow access to some Drupal core icons.

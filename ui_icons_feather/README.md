@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Feather icons module provider for UI Icons.
+The [Feather Icons](https://feathericons.com/) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -10,10 +10,10 @@ information.
 
 ### Option 1
 
-Install [Feather](https://feathericons.com/) in this module.
+Install [Feather Icons](https://www.npmjs.com/package/feather-icons) in this module.
 
 ```shell
-npm install
+npm i feather-icons
 ```
 
 So your folder structure is:
@@ -36,8 +36,3 @@ in this module.
 ui_icons_feather
   └── feather-sprite.svg
 ```
-
-### Option 3
-
-Install files of previous options in the Drupal libraries folder and adapt
-`ui_icons_feather.ui_icons`.

@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Material Symbols module provider for UI Icons.
+The [Material Symbols](https://fonts.google.com/icons) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -10,10 +10,6 @@ information.
 
 Grab files from the [repository folder variablefont](https://github.com/google/material-design-icons/tree/master/variablefont).
 And extract `.ttf` files in this module.
-
-```shell
-npm install
-```
 
 So your folder structure is:
 

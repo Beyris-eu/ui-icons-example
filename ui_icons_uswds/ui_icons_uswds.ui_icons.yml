@@ -17,12 +17,18 @@ uswds:
       title: "Size"
       type: "integer"
       default: 32
+    # Color is an example, see documentation for USWDS color handling.
+    # https://designsystem.digital.gov/components/icon/
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
   template: >
     <svg
       class="usa-icon"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
-      fill="currentColor"
+      fill="{{ color|default(currentColor) }}"
       aria-hidden="true"
     >
       <use xlink:href="{{ source }}#{{ icon_id }}"/>

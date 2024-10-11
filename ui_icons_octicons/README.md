@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Octicons module provider for UI Icons.
+The [Octicons](https://primer.style/foundations/icons) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -11,7 +11,7 @@ information.
 Install [Octicons icons](https://github.com/primer/octicons) in this module.
 
 ```shell
-npm install
+npm i @primer/octicons
 ```
 
 So your folder structure is:

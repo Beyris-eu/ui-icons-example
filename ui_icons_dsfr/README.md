@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The DSFR icons module provider for UI Icons.
+The [DSFR](https://www.systeme-de-design.gouv.fr/) icons module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -11,7 +11,7 @@ information.
 Install [DSFR icons](https://www.npmjs.com/package/@gouvfr/dsfr) in this module.
 
 ```shell
-npm install
+npm i @gouvfr/dsfr
 ```
 
 So your folder structure is:

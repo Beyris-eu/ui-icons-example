@@ -19,16 +19,20 @@ font_awesome:
       title: "Size"
       type: "integer"
       default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
+    <svg xmlns="http://www.w3.org/2000/svg"
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
       width="{{ size|default(32) }}"
+      fill="{{ color|default(currentColor) }}"
       {% if alt is empty %}
         aria-hidden="true"
         focusable="false"
@@ -58,17 +62,20 @@ font_awesome_svg:
       title: "Size"
       type: "integer"
       default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 512 512"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
       width="{{ size|default(32) }}"
+      fill="{{ color|default(currentColor) }}"
       {% if alt is empty %}
         aria-hidden="true"
         focusable="false"
@@ -111,8 +118,26 @@ font_awesome_name:
       title: "Animate"
       type: "string"
       enum: ["", "beat", "fade", "beat-fade", "bounce", "flip", "shake", "spin", "spin-pulse"]
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
   library: "ui_icons_fontawesome/font_awesome_icons"
   template: >
-    <i class="fa-solid fa-{{ icon_id }} fa-{{ size|default(2) }}x{% if animate %} fa-{{ animate }}{% endif %}{% if rotate and rotate != 0 %} fa-rotate-{{ rotate }}{% endif %}"></i>
+    {% set classes = [
+      'fa-' ~ icon_id|clean_class,
+      'fa-' ~ size|default(2) ~ 'x',
+    ] %}
+    {% if animate %}
+      {% set classes = classes|merge(['fa-' ~ animate]) %}
+    {% endif %}
+    {% if rotate and rotate != 0 %}
+      {% set classes = classes|merge(['fa-rotate-' ~ rotate]) %}
+    {% endif %}
+    <i class="fa-solid {{ classes|join(' ') }}"
+      {% if color %}style="color: {{ color }};"{% endif %}
+    ></i>
   preview: >
-    <i class="fa-solid fa-{{ icon_id }}" title="{{ label }}" style="font-size: {{ size|default(48) }}px; line-height: {{ size|default(48) }}px;"></i>
+    <i class="fa-solid fa-{{ icon_id }}" title="{{ label }}"
+      style="font-size: {{ size|default(48) }}px; line-height: {{ size|default(48) }}px;"
+    ></i>

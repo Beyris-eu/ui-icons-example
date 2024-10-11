@@ -1,3 +1,4 @@
+# Recommended sprite version, only one file.
 bootstrap:
   enabled: true
   label: "Bootstrap"
@@ -41,6 +42,7 @@ bootstrap:
       <use xlink:href="{{ source }}#{{ icon_id }}"/>
     </svg>
 
+# Alternative SVG files.
 bootstrap_svg:
   enabled: false
   label: "Bootstrap"
@@ -53,9 +55,9 @@ bootstrap_svg:
   extractor: svg
   config:
     sources:
-      - node_modules/bootstrap-icons/icons/{icon_id}.svg
+      - node_modules/bootstrap-icons/icons/*.svg
       # Or path in libraries relative to Drupal root web folder.
-      # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/icons/{icon_id}.svg
+      # - /libraries/bootstrap-icons/node_modules/bootstrap-icons/icons/*.svg
   settings:
     size:
       title: "Size"
@@ -70,8 +72,7 @@ bootstrap_svg:
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
       class="bi bi-{{ icon_id|clean_class }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
@@ -85,6 +86,9 @@ bootstrap_svg:
       {{ content }}
     </svg>
 
+# Require sub module ui_icons_font.
+# Alternative font version, need preview template to work properly and json list
+# of icons for discovery.
 bootstrap_name:
   enabled: false
   label: "Bootstrap"
@@ -110,16 +114,14 @@ bootstrap_name:
       format: "color"
   library: 'ui_icons_bootstrap/bootstrap_icons'
   template: >
-    <i
-      class="bi-{{ icon_id|clean_class }}"
+    <i class="bi bi-{{ icon_id|clean_class }}"
       style="
         font-size: {{ size|default(32) }}px;
         {% if color %}color: {{ color }};{% endif %}
       "
     ></i>
   preview: >
-    <i
-      class="bi-{{ icon_id|clean_class }}"
+    <i class="bi bi-{{ icon_id|clean_class }}"
       title="{{ label }}"
       style="
         font-size: {{ size|default(48) }}px;

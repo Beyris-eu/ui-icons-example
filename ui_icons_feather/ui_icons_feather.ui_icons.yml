@@ -21,7 +21,7 @@ feather:
       title: "Color"
       type: "string"
       format: "color"
-    width:
+    stroke:
       title: "Stroke width"
       type: "integer"
       default: 2
@@ -48,7 +48,7 @@ feather:
       height="{{ size|default(32) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
-      stroke-width="{{ width|default(2) }}"
+      stroke-width="{{ stroke|default(2) }}"
       stroke-linecap="{{ linecap|default('round') }}"
       stroke-linejoin="{{ linejoin|default('round') }}"
       {% if opacity %}stroke-opacity="{{ opacity }}"{% endif %}
@@ -82,7 +82,7 @@ feather_sprite:
       title: "Color"
       type: "string"
       format: "color"
-    width:
+    stroke:
       title: "Stroke width"
       type: "integer"
       default: 2
@@ -108,7 +108,7 @@ feather_sprite:
       height="{{ size|default(32) }}"
       fill="none"
       stroke="{{ color|default('currentColor') }}"
-      stroke-width="{{ width|default(2) }}"
+      stroke-width="{{ stroke|default(2) }}"
       stroke-linecap="{{ linecap|default('round') }}"
       stroke-linejoin={{ linejoin|default('round') }}"
       {% if opacity %}stroke-opacity="{{ opacity }}"{% endif %}
@@ -116,7 +116,7 @@ feather_sprite:
       <use href="{{ source }}#{{ icon_id }}" />
     </svg>
 
-# Not recommended as this will not work with CKEditor plugin.
+# Not recommended as this will not work with CKEditor5 plugin.
 feather_names:
   enabled: false
   label: Feather

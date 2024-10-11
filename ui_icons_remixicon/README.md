@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The Remix icon module provider for UI Icons.
+The [Remix icon](https://remixicon.com) module provider for UI Icons.
 
 ## INSTALLATION
 
@@ -11,7 +11,7 @@ information.
 Install [Remix icon](https://remixicon.com/download) in this module.
 
 ```shell
-npm install
+npm i remixicon
 ```
 
 So your folder structure is:
