@@ -4,8 +4,10 @@ core:
   label: "Drupal"
   description: "Drupal core icons available within Drupal."
   version: 11
-  license: GPL2-or-later
-  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+  license:
+    name: GPL2-or-later
+    url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+    gpl-compatible: true
   extractor: path
   config:
     sources:
@@ -71,8 +73,10 @@ navigation:
   label: "Drupal Navigation"
   description: "Drupal core icons available within Drupal Navigation module."
   version: 11
-  license: GPL2-or-later
-  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+  license:
+    name: GPL2-or-later
+    url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+    gpl-compatible: true
   extractor: path
   config:
     sources:
@@ -117,8 +121,10 @@ olivero:
   label: "Drupal Olivero"
   description: "Drupal core icons available within Drupal theme Olivero."
   version: 11
-  license: GPL2-or-later
-  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+  license:
+    name: GPL2-or-later
+    url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+    gpl-compatible: true
   extractor: path
   config:
     sources:
@@ -163,8 +169,10 @@ claro:
   label: "Drupal Claro"
   description: "Drupal core icons available within Drupal theme Claro."
   version: 11
-  license: GPL2-or-later
-  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+  license:
+    name: GPL2-or-later
+    url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+    gpl-compatible: true
   extractor: path
   config:
     sources:
@@ -218,8 +226,10 @@ starterkit:
   label: "Drupal Starterkit"
   description: "Drupal core icons available within Drupal starter kit."
   version: 11
-  license: GPL2-or-later
-  license_url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+  license:
+    name: GPL2-or-later
+    url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
+    gpl-compatible: true
   extractor: path
   config:
     sources:

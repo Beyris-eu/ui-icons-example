@@ -6,8 +6,10 @@ octicons:
     - https://primer.style/foundations/icons
     - https://github.com/primer/octicons
   version: 19.11.0
-  license: MIT
-  license_url: https://github.com/primer/octicons/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/primer/octicons/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg
   config:
     sources:

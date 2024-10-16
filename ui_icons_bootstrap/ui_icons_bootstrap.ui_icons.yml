@@ -6,8 +6,10 @@ bootstrap:
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
-  license: MIT
-  license_url: https://github.com/twbs/icons/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/twbs/icons/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg_sprite
   config:
     sources:
@@ -50,8 +52,10 @@ bootstrap_svg:
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
-  license: MIT
-  license_url: https://github.com/twbs/icons/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/twbs/icons/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -96,8 +100,10 @@ bootstrap_name:
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
-  license: MIT
-  license_url: https://github.com/twbs/icons/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/twbs/icons/blob/main/LICENSE
+    gpl-compatible: true
   extractor: font
   config:
     sources:

@@ -6,8 +6,10 @@ font_awesome:
     - https://fontawesome.com/icons
     - https://docs.fontawesome.com/web/add-icons/svg-sprites
   version: 6.6.0
-  license: Font Awesome Free License
-  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+    gpl-compatible: true
   extractor: svg_sprite
   config:
     sources:
@@ -51,8 +53,10 @@ font_awesome_svg:
     - https://fontawesome.com/icons
     - https://docs.fontawesome.com/web/add-icons/svg-bare
   version: 6.6.0
-  license: Font Awesome Free License
-  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -93,8 +97,10 @@ font_awesome_name:
   links:
     - https://docs.fontawesome.com/web/add-icons/svg-icon-names
   version: 6.6.0
-  license: Font Awesome Free License
-  license_url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+  license:
+    name: Font Awesome Free License
+    url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
+    gpl-compatible: true
   extractor: font
   config:
     sources:

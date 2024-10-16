@@ -6,8 +6,10 @@ uswds:
     - https://designsystem.digital.gov/components/icon/
     - https://github.com/uswds/uswds/
   version: 3.8.1
-  license: Apache 2.0 License and design modifications by GSA released as CC0
-  license_url: https://github.com/uswds/uswds/blob/develop/LICENSE.md
+  license:
+    name: Apache 2.0 License and design modifications by GSA released as CC0
+    url: https://github.com/uswds/uswds/blob/develop/LICENSE.md
+    gpl-compatible: true
   extractor: svg_sprite
   config:
     sources:

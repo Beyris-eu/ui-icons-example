@@ -5,8 +5,10 @@ material:
   links:
     - https://github.com/google/material-design-icons
   version: 4.0.0
-  license: Apache-2.0
-  license_url: https://github.com/google/material-design-icons/blob/master/LICENSE
+  license:
+    name: Apache-2.0
+    url: https://github.com/google/material-design-icons/blob/master/LICENSE
+    gpl-compatible: true
   extractor: font
   config:
     sources:

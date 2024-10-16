@@ -6,8 +6,10 @@ feather:
     - https://feathericons.com/
     - https://github.com/feathericons/feather?tab=readme-ov-file
   version: 4.29.2
-  license: MIT
-  license_url: https://github.com/feathericons/feather/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/feathericons/feather/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -64,8 +66,10 @@ feather_sprite:
     - https://feathericons.com/
     - https://github.com/feathericons/feather?tab=readme-ov-file#svg-sprite
   version: 4.29.2
-  license: MIT
-  license_url: https://github.com/feathericons/feather/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/feathericons/feather/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg_sprite
   config:
     sources:
@@ -125,8 +129,10 @@ feather_names:
     - https://feathericons.com/
     - https://github.com/feathericons/feather?tab=readme-ov-file
   version: 4.29.2
-  license: MIT
-  license_url: https://github.com/feathericons/feather/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/feathericons/feather/blob/main/LICENSE
+    gpl-compatible: true
   extractor: font
   config:
     sources:

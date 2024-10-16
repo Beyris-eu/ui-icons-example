@@ -5,8 +5,10 @@ dsfr:
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
-  license: MIT
-  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+  license:
+    name: MIT
+    url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -50,8 +52,10 @@ dsfr_picto:
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
-  license: MIT
-  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+  license:
+    name: MIT
+    url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -104,8 +108,10 @@ dsfr_name:
   links:
     - https://www.systeme-de-design.gouv.fr/fondamentaux/icone
   version: 1.12.1
-  license: MIT
-  license_url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+  license:
+    name: MIT
+    url: https://github.com/GouvernementFR/dsfr/blob/main/LICENSE.md
+    gpl-compatible: true
   # No metadata sources for icons, only physical files.
   extractor: svg
   config:

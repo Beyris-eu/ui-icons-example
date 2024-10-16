@@ -6,8 +6,10 @@ phosphor:
     - https://phosphoricons.com
     - https://github.com/phosphor-icons/core
   version: 2.1.1
-  license: MIT
-  license_url: https://github.com/phosphor-icons/core/blob/main/LICENSE
+  license:
+    name: MIT
+    url: https://github.com/phosphor-icons/core/blob/main/LICENSE
+    gpl-compatible: true
   extractor: svg
   config:
     sources:

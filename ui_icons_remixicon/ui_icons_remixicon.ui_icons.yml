@@ -6,8 +6,10 @@ remixicon:
     - https://remixicon.com
     - https://github.com/Remix-Design/RemixIcon
   version: 4.3.0
-  license: Apache-2.0
-  license_url: https://github.com/Remix-Design/RemixIcon/blob/master/License
+  license:
+    name: Apache-2.0
+    url: https://github.com/Remix-Design/RemixIcon/blob/master/License
+    gpl-compatible: true
   extractor: svg
   config:
     sources:
@@ -48,8 +50,10 @@ remixicon_sprite:
     - https://remixicon.com/
     - https://github.com/Remix-Design/RemixIcon
   version: 4.3.0
-  license: Apache-2.0
-  license_url: https://github.com/Remix-Design/RemixIcon/blob/master/License
+  license:
+    name: Apache-2.0
+    url: https://github.com/Remix-Design/RemixIcon/blob/master/License
+    gpl-compatible: true
   extractor: svg_sprite
   config:
     sources:
