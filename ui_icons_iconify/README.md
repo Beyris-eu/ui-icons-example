@@ -14,8 +14,8 @@ information.
 This module provide example definition to allow integration of Icons from
 [Iconify](https://iconify.design).
 
-Inspect file `ui_icons_iconify.ui_icons.yml` to define your icons in your own
-***.ui_icons.yml** file. See module `UI Icons` README for more information.
+Inspect file `ui_icons_iconify.icons.yml` to define your icons in your own
+***.icons.yml** file. See module `UI Icons` README for more information.
 
 Key `config: collections` allow integration of [Icon sets](https://icon-sets.iconify.design/).
 A collection must be added as ID, ID can be found in the url from Iconify Sets
