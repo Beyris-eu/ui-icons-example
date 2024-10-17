@@ -7,7 +7,7 @@ icomoon:
   extractor: svg
   config:
     sources:
-      - icomoon/{group}/{icon_id}.svg
+      - icomoon/{group}/*.svg
   settings:
     size:
       title: "Size"

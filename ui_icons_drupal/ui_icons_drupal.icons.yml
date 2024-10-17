@@ -3,7 +3,7 @@ core:
   enabled: true
   label: "Drupal"
   description: "Drupal core icons available within Drupal."
-  version: 11
+  version: 11.x
   license:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
@@ -72,7 +72,7 @@ navigation:
   enabled: true
   label: "Drupal Navigation"
   description: "Drupal core icons available within Drupal Navigation module."
-  version: 11
+  version: 11.x
   license:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
@@ -120,7 +120,7 @@ olivero:
   enabled: true
   label: "Drupal Olivero"
   description: "Drupal core icons available within Drupal theme Olivero."
-  version: 11
+  version: 11.x
   license:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
@@ -168,7 +168,7 @@ claro:
   enabled: true
   label: "Drupal Claro"
   description: "Drupal core icons available within Drupal theme Claro."
-  version: 11
+  version: 11.x
   license:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
@@ -225,7 +225,7 @@ starterkit:
   enabled: true
   label: "Drupal Starterkit"
   description: "Drupal core icons available within Drupal starter kit."
-  version: 11
+  version: 11.x
   license:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
