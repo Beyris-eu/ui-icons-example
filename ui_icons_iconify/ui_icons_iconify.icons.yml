@@ -13,7 +13,7 @@ iconify_flags:
       default: 32
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -21,7 +21,7 @@ iconify_flags:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
@@ -50,7 +50,7 @@ iconify_circle_flags:
       default: 32
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -58,7 +58,7 @@ iconify_circle_flags:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
@@ -88,7 +88,7 @@ iconify_geo:
       default: 32
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -96,7 +96,7 @@ iconify_geo:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
@@ -132,7 +132,7 @@ iconify_animated:
       default: 32
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -140,7 +140,7 @@ iconify_animated:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
@@ -181,7 +181,7 @@ iconify_emoji:
       type: "integer"
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -189,7 +189,7 @@ iconify_emoji:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
@@ -230,7 +230,7 @@ iconify_programming:
       type: "integer"
     flip:
       title: "Flip"
-      type: "text"
+      type: "string"
       enum:
         - original
         - horizontal
@@ -238,7 +238,7 @@ iconify_programming:
         - horizontal,vertical
     rotate:
       title: "Rotate"
-      type: "text"
+      type: "string"
       enum:
         - 0deg
         - 90deg
