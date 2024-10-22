@@ -30,7 +30,7 @@ uswds:
       class="usa-icon"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
-      fill="{{ color|default(currentColor) }}"
+      fill="{{ color|default('currentColor') }}"
       aria-hidden="true"
     >
       <use xlink:href="{{ source }}#{{ icon_id }}"/>

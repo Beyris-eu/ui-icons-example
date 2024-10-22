@@ -34,7 +34,7 @@ font_awesome:
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
       width="{{ size|default(32) }}"
-      fill="{{ color|default(currentColor) }}"
+      fill="{{ color|default('currentColor') }}"
       {% if alt is empty %}
         aria-hidden="true"
         focusable="false"
@@ -79,7 +79,7 @@ font_awesome_svg:
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
       width="{{ size|default(32) }}"
-      fill="{{ color|default(currentColor) }}"
+      fill="{{ color|default('currentColor') }}"
       {% if alt is empty %}
         aria-hidden="true"
         focusable="false"

@@ -35,7 +35,7 @@ dsfr:
       class="icon icon-{{ icon_id|clean_class }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
-      fill="{{ color|default(currentColor) }}"
+      fill="{{ color|default('currentColor') }}"
       {% if alt is empty %}
         aria-hidden="true"
       {% else %}
