@@ -1,0 +1,39 @@
+ionicons:
+  enabled: true
+  label: "Ionicons"
+  description: "Open source icons. Lovingly hand-crafted."
+  links:
+    - https://ionic.io/ionicons
+  version: 7.1.0
+  license:
+    name: MIT
+    url: https://github.com/ionic-team/ionicons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/ionicons/dist/svg/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
+      class="ionicons ionicons-{{ icon_id|clean_class }}"
+      width="{{ size|default(24) }}"
+      height="{{ size|default(24) }}"
+      fill="none"
+      stroke="currentColor"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      {{ content }}
+    </svg>

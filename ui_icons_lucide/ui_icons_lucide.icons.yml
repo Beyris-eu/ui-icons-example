@@ -1,0 +1,46 @@
+lucide:
+  enabled: true
+  label: "Lucide"
+  description: "Beautiful & consistent icons. Made by the community."
+  links:
+    - https://github.com/swisnl/nuxt-lucide-icons/blob/main/README.md
+  version: 0.453.0
+  license:
+    name: MIT
+    url: https://github.com/swisnl/nuxt-lucide-icons/blob/main/LICENSE.md
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/lucide-static/icons/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      class="lucide lucide-{{ icon_id|clean_class }}"
+      width="{{ size|default(24) }}"
+      height="{{ size|default(24) }}"
+      fill="none"
+      stroke="{{ color|default('currentColor') }}"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      {{ content }}
+    </svg>

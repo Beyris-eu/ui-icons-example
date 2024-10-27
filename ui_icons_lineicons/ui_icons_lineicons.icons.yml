@@ -1,0 +1,42 @@
+lineicons:
+  enabled: true
+  label: "Line Icons"
+  description: "Make Every Project Unique. Stand Out With Lineicons."
+  links:
+    - https://lineicons.com/docs
+  version: v5
+  license:
+    name: MIT
+    url: https://github.com/LineiconsHQ/Lineicons/blob/main/LICENSE.md
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/lineicons/svg-files/{group}/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"
+      class="icon icon-{{ icon_id|clean_class }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      fill="{{ color|default('currentColor') }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      {{ content }}
+    </svg>
