@@ -46,7 +46,7 @@ dsfr:
     </svg>
 
 dsfr_picto:
-  enabled: false
+  enabled: true
   label: DSFR Picto
   description: "DSFR pictograms from SVG files, Must be used with DSFR full theme."
   links:
@@ -69,6 +69,7 @@ dsfr_picto:
       title: "Color secondary"
       type: "string"
       enum:
+        # Default color.
         - red-marianne
         - green-tilleul-verveine
         - green-bourgeon
@@ -89,11 +90,14 @@ dsfr_picto:
         - beige-gris-galet
       default: "red-marianne"
   template: >
-    <svg class="fr-artwork fr-artwork--{{ color }}" aria-hidden="true" viewBox="0 0 80 80" width="{{ size|default(80) }}px" height="{{ size|default(80) }}px">
+    <svg class="fr-artwork fr-artwork--{{ color|default('red-marianne') }}" aria-hidden="true" viewBox="0 0 80 80" width="{{ size|default(80) }}" height="{{ size|default(80) }}">
       <use class="fr-artwork-decorative" xlink:href="{{ source }}#artwork-decorative"></use>
       <use class="fr-artwork-minor" xlink:href="{{ source }}#artwork-minor"></use>
       <use class="fr-artwork-major" xlink:href="{{ source }}#artwork-major"></use>
     </svg>
+  # Library is required for colors and css.
+  # Colors do not apply in CKEditor5 as the css is not loaded here and need a
+  # specific theme including DSFR css in CKEditor5.
   library: "ui_icons_dsfr/dsfr_picto"
 
 # The theme version must use ckeditor5-stylesheets in _my_theme_.info.yml to
