@@ -1,0 +1,42 @@
+maki:
+  enabled: true
+  label: "Maki"
+  description: "Maki is an icon set made for map designers. "
+  links:
+    - https://labs.mapbox.com/maki-icons/
+  version: 8.0.0
+  license:
+    name: CC0 1.0 Universal
+    url: https://github.com/mapbox/maki/blob/main/LICENSE.txt
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - icons/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    alt:
+      title: "Alt text"
+      type: "string"
+      description: "Accessibility alternative text, leave empty for decorative icon."
+  template: >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"
+      class="maki maki-{{ icon_id|clean_class }}"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      fill="{{ color|default('currentColor') }}"
+      {% if alt is empty %}
+        aria-hidden="true"
+      {% else %}
+        aria-label="{{ alt }}"
+      {% endif %}
+    >
+      {{ content }}
+    </svg>
