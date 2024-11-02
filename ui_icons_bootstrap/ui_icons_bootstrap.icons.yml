@@ -96,7 +96,7 @@ bootstrap_svg:
 bootstrap_name:
   enabled: false
   label: "Bootstrap"
-  description: "Bootstrap icons from SVG Sprite single source."
+  description: "Bootstrap icons from CSS name."
   links:
     - https://icons.getbootstrap.com/#usage
   version: 1.11.3
