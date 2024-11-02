@@ -21,6 +21,7 @@ So your folder structure is:
 ```
 └── node_modules
   └── lineicons
-    └── svg-files
-      └── _GROUP_
+    └── assets
+      └── svgs
+        └── regular
 ```
