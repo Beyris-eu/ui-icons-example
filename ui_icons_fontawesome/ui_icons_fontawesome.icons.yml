@@ -92,7 +92,7 @@ font_awesome_svg:
 
 font_awesome_name:
   enabled: false
-  label: "Font Awesome"
+  label: "Font Awesome Name"
   description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
   links:
     - https://docs.fontawesome.com/web/add-icons/svg-icon-names
@@ -131,7 +131,7 @@ font_awesome_name:
   library: "ui_icons_fontawesome/font_awesome_icons"
   template: >
     {% set classes = [
-      'fa-' ~ icon_id|clean_class,
+      'fa-' ~ icon_id,
       'fa-' ~ size|default(2) ~ 'x',
     ] %}
     {% if animate %}

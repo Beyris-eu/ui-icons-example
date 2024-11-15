@@ -77,7 +77,7 @@ navigation:
     name: GPL2-or-later
     url: https://api.drupal.org/api/drupal/core%21LICENSE.txt/11.x
     gpl-compatible: true
-  extractor: path
+  extractor: svg
   config:
     sources:
       - /core/modules/navigation/assets/icons/*.svg
@@ -88,22 +88,18 @@ navigation:
       description: "Set a size for this icon."
       type: "integer"
       default: 32
-    alt:
-      title: "Alt text"
-      type: "string"
-      description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <img
-      class="icon icon-{{ icon_id|clean_class }}"
-      src="{{ source }}"
-      width="{{ size|default(32) }}"
-      height="{{ size|default(32) }}"
-      alt="{{ alt }}"
-      {% if alt is empty %}
-        role="presentation"
-        aria-hidden="true"
-      {% endif %}
-    >
+    <svg{{
+        attributes
+          .addClass('icon')
+          .setAttribute('viewBox', attributes.viewBox|default('0 0 32 32'))
+          .setAttribute('width', size|default('32'))
+          .setAttribute('height', size|default('32'))
+          .setAttribute('aria-hidden', 'true')
+          .setAttribute('role', 'presentation')
+    }}>
+      {{ content }}
+    </svg>
 
 olivero:
   enabled: true

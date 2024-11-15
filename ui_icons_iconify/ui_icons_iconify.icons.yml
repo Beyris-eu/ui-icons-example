@@ -37,7 +37,7 @@ iconify_flags:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_circle_flags:
-  enabled: false
+  enabled: true
   label: Iconify Circle flags
   extractor: iconify
   config:
@@ -74,7 +74,7 @@ iconify_circle_flags:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_geo:
-  enabled: false
+  enabled: true
   label: Iconify Geo
   extractor: iconify
   config:
@@ -117,7 +117,7 @@ iconify_geo:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_animated:
-  enabled: false
+  enabled: true
   label: Iconify Animated
   extractor: iconify
   config:
@@ -161,7 +161,7 @@ iconify_animated:
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_emoji:
-  enabled: false
+  enabled: true
   label: Iconify Emoji
   extractor: iconify
   config:
@@ -170,15 +170,10 @@ iconify_emoji:
       - fxemoji
       - emojione-v1
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
       default: 32
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
     flip:
       title: "Flip"
       type: "string"
@@ -195,22 +190,17 @@ iconify_emoji:
         - 90deg
         - 180deg
         - 270deg
-    color:
-      title: "Color"
-      type: "string"
-      format: "color"
   template: >
     {% set params = {
       width: size,
       height: size,
       rotate: rotate,
-      flip: flip,
-      color: color
+      flip: flip
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />
 
 iconify_programming:
-  enabled: false
+  enabled: true
   label: Iconify Programming
   extractor: iconify
   config:
@@ -219,15 +209,10 @@ iconify_programming:
       - devicon
       - unjs
   settings:
-    width:
-      title: "Width"
-      description: "Set a width for this icon."
+    size:
+      title: "Size"
       type: "integer"
       default: 32
-    height:
-      title: "Height"
-      description: "Set a height for this icon."
-      type: "integer"
     flip:
       title: "Flip"
       type: "string"
@@ -244,16 +229,11 @@ iconify_programming:
         - 90deg
         - 180deg
         - 270deg
-    color:
-      title: "Color"
-      type: "string"
-      format: "color"
   template: >
     {% set params = {
       width: size,
       height: size,
       rotate: rotate,
-      flip: flip,
-      color: color
+      flip: flip
     }|filter(v => v is not null) %}
     <img src="{{ source }}?{{ params|url_encode }}" />

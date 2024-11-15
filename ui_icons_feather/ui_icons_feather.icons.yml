@@ -121,9 +121,9 @@ feather_sprite:
     </svg>
 
 # Not recommended as this will not work with CKEditor5 plugin.
-feather_names:
+feather_name:
   enabled: false
-  label: Feather
+  label: "Feather Name"
   description: "Feather icons - Simply beautiful open source icons."
   links:
     - https://feathericons.com/

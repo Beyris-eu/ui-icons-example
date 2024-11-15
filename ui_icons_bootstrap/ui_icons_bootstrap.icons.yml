@@ -47,7 +47,7 @@ bootstrap:
 # Alternative SVG files.
 bootstrap_svg:
   enabled: false
-  label: "Bootstrap"
+  label: "Bootstrap SVG"
   description: "Bootstrap icons from SVG files."
   links:
     - https://icons.getbootstrap.com/#usage
@@ -71,31 +71,67 @@ bootstrap_svg:
       title: "Color"
       type: "string"
       format: "color"
+  template: >
+    <svg{{
+        attributes
+          .setAttribute('viewBox', attributes.viewBox|default('0 0 16 16'))
+          .setAttribute('width', size|default('32'))
+          .setAttribute('height', size|default('32'))
+          .setAttribute('aria-hidden', 'true')
+    }}>
+      {{ content }}
+    </svg>
+
+# Alternative SVG files in img.
+bootstrap_path:
+  enabled: false
+  label: "Bootstrap SVG in img"
+  description: "Bootstrap icons from SVG files in img."
+  links:
+    - https://icons.getbootstrap.com/#usage
+  version: 1.11.3
+  license:
+    name: MIT
+    url: https://github.com/twbs/icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: path
+  config:
+    sources:
+      - node_modules/bootstrap-icons/icons/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
     alt:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
   template: >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+    <img
       class="bi bi-{{ icon_id|clean_class }}"
+      src="{{ source }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
-      fill="{{ color|default('currentColor') }}"
+      alt="{{ alt }}"
       {% if alt is empty %}
+        role="presentation"
         aria-hidden="true"
-      {% else %}
-        aria-label="{{ alt }}"
+      {% elseif title %}
+        title="{{ title }}"
       {% endif %}
     >
-      {{ content }}
-    </svg>
 
 # Require sub module ui_icons_font.
 # Alternative font version, need preview template to work properly and json list
 # of icons for discovery.
 bootstrap_name:
   enabled: false
-  label: "Bootstrap"
+  label: "Bootstrap Name"
   description: "Bootstrap icons from CSS name."
   links:
     - https://icons.getbootstrap.com/#usage
@@ -118,14 +154,17 @@ bootstrap_name:
       title: "Color"
       type: "string"
       format: "color"
-  library: 'ui_icons_bootstrap/bootstrap_icons'
+  # Do not clean class as id must be exact for class based.
   template: >
-    <i class="bi bi-{{ icon_id|clean_class }}"
+    <i class="bi bi-{{ icon_id }}"
       style="
-        font-size: {{ size|default(32) }}px;
-        {% if color %}color: {{ color }};{% endif %}
+        font-size:{{ size|default(32) }}px;
+        {% if color %}color:{{ color }};{% endif %}
       "
     ></i>
+  # Load css file to allow class based icon.
+  library: 'ui_icons_bootstrap/bootstrap_icons'
+  # Do not clean class as id must be exact for class based.
   preview: >
     <i class="bi bi-{{ icon_id|clean_class }}"
       title="{{ label }}"
