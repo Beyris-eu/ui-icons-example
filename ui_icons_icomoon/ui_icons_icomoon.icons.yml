@@ -13,7 +13,7 @@ icomoon:
       title: "Size"
       type: "integer"
       default: 32
-  template: >
+  template: >-
     <svg viewBox="0 0 32 32" class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
       {{ content }}
     </svg>
@@ -34,7 +34,7 @@ icomoon_sprite:
       title: "Size"
       type: "integer"
       default: 32
-  template: >
+  template: >-
     <svg viewBox="0 0 32 32" class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
       <use xlink:href="{{ source }}#{{ icon_id }}"></use>
     </svg>

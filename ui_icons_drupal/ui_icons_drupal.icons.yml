@@ -53,7 +53,7 @@ core:
       title: "Semantic title"
       type: "string"
       description: "If this icon convey meaning, provide text-based alternatives, leave empty for decorative icon."
-  template: >
+  template: >-
     <img
       class="icon icon-{{ icon_id|clean_class }}"
       src="{{ source }}"
@@ -88,7 +88,7 @@ navigation:
       description: "Set a size for this icon."
       type: "integer"
       default: 32
-  template: >
+  template: >-
     <svg{{
         attributes
           .addClass('icon')
@@ -134,7 +134,7 @@ olivero:
       title: "Semantic title"
       type: "string"
       description: "If this icon convey meaning, provide text-based alternatives, leave empty for decorative icon."
-  template: >
+  template: >-
     <img
       class="icon icon-{{ icon_id|clean_class }}"
       src="{{ source }}"
@@ -191,7 +191,7 @@ claro:
       title: "Semantic title"
       type: "string"
       description: "If this icon convey meaning, provide text-based alternatives, leave empty for decorative icon."
-  template: >
+  template: >-
     <img
       class="icon icon-{{ icon_id|clean_class }}"
       src="{{ source }}"
@@ -239,7 +239,7 @@ starterkit:
       title: "Semantic title"
       type: "string"
       description: "If this icon convey meaning, provide text-based alternatives, leave empty for decorative icon."
-  template: >
+  template: >-
     <img
       class="icon icon-{{ icon_id|clean_class }}"
       src="{{ source }}"

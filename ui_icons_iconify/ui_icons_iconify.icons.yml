@@ -27,7 +27,7 @@ iconify_flags:
         - 90deg
         - 180deg
         - 270deg
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,
@@ -64,7 +64,7 @@ iconify_circle_flags:
         - 90deg
         - 180deg
         - 270deg
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,
@@ -106,7 +106,7 @@ iconify_geo:
       title: "Color"
       type: "string"
       format: "color"
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,
@@ -150,7 +150,7 @@ iconify_animated:
       title: "Color"
       type: "string"
       format: "color"
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,
@@ -190,7 +190,7 @@ iconify_emoji:
         - 90deg
         - 180deg
         - 270deg
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,
@@ -229,7 +229,7 @@ iconify_programming:
         - 90deg
         - 180deg
         - 270deg
-  template: >
+  template: >-
     {% set params = {
       width: size,
       height: size,

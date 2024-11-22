@@ -23,7 +23,7 @@ heroicons:
       title: Fill color
       type: "string"
       format: "color"
-  template: >
+  template: >-
     <svg
       class="heroicon icon-{{ icon_id|clean_class }}"
       fill="{{ color|default('currentColor') }}"
@@ -68,7 +68,7 @@ heroicons_outline:
       minimum: 1.0
       maximum: 2.0
       multipleOf: 0.1
-  template: >
+  template: >-
     <svg
       class="heroicon icon-{{ icon_id|clean_class }}"
       fill="none"

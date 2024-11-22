@@ -29,7 +29,7 @@ font_awesome:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
+  template: >-
     <svg xmlns="http://www.w3.org/2000/svg"
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
@@ -74,7 +74,7 @@ font_awesome_svg:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
-  template: >
+  template: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
       class="icon icon-{{ icon_id|clean_class }}"
       height="{{ size|default(32) }}"
@@ -129,7 +129,7 @@ font_awesome_name:
       type: "string"
       format: "color"
   library: "ui_icons_fontawesome/font_awesome_icons"
-  template: >
+  template: >-
     {% set classes = [
       'fa-' ~ icon_id,
       'fa-' ~ size|default(2) ~ 'x',

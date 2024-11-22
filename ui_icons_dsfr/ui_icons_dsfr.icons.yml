@@ -30,7 +30,7 @@ dsfr:
       title: "Alt text"
       description: "Accessibility alternative text, leave empty for decorative icon."
       type: string
-  template: >
+  template: >-
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
       class="icon icon-{{ icon_id|clean_class }}"
       width="{{ size|default(32) }}"
@@ -89,7 +89,7 @@ dsfr_picto:
         - brown-opera
         - beige-gris-galet
       default: "red-marianne"
-  template: >
+  template: >-
     <svg class="fr-artwork fr-artwork--{{ color|default('red-marianne') }}" aria-hidden="true" viewBox="0 0 80 80" width="{{ size|default(80) }}" height="{{ size|default(80) }}">
       <use class="fr-artwork-decorative" xlink:href="{{ source }}#artwork-decorative"></use>
       <use class="fr-artwork-minor" xlink:href="{{ source }}#artwork-minor"></use>
@@ -128,7 +128,7 @@ dsfr_name:
       enum: ['xs', 'md', 'lg']
       default: 'md'
   library: ui_icons_dsfr/dsfr_icons
-  template: >
+  template: >-
     <span
       class="fr-icon-{{ icon_id|replace({'fr--': ""})|clean_class }}{% if size != 'md' %} fr-icon--{{ size }}{% endif %}"
       aria-hidden="true"

@@ -121,7 +121,7 @@ uswds:
         "#8168b3": "Violet"
         "#d72d79": "Magenta"
       default: "currentColor"
-  template: >
+  template: >-
     <svg
       class="usa-icon"
       width="{{ size|default(32) }}"

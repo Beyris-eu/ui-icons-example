@@ -43,7 +43,7 @@ feather:
       multipleOf: 0.1
       minimum: 0.1
       maximum: 1
-  template: >
+  template: >-
     <svg
       viewBox="0 0 24 24"
       width="{{ size|default(32) }}"
@@ -106,7 +106,7 @@ feather_sprite:
       multipleOf: 0.1
       minimum: 0.1
       maximum: 1
-  template: >
+  template: >-
     <svg
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
@@ -147,7 +147,7 @@ feather_name:
       type: "string"
       format: "color"
   library: 'ui_icons_feather/feather_icons'
-  template: >
+  template: >-
     <i data-feather="{{ icon_id }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}" style="font-size: {{ size|default(32) }}px;{% if color %}color: {{ color }};{% endif %}"></i>
   preview: >
     <i data-feather="{{ icon_id }}" title="{{ label }}" width="{{ size|default(48) }}" height="{{ size|default(48) }}"></i>

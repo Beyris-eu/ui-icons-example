@@ -37,7 +37,7 @@ remixicon:
       title: Fill
       type: string
       format: color
-  template: >
+  template: >-
     <svg class="remix" viewBox="0 0 24 24" width="{{ size|default(32) }}" height="{{ size|default(32) }}"{% if color %} fill="{{ color }}"{% endif %}>
       {{ content }}
     </svg>
@@ -79,7 +79,7 @@ remixicon_sprite:
       title: Fill
       type: string
       format: color
-  template: >
+  template: >-
     <svg class="remix" width="{{ size|default(32) }}" height="{{ size|default(32) }}"{% if color %} fill="{{ color }}"{% endif %}>
       <use xlink:href="{{ source }}#{{ icon_id }}"></use>
     </svg>

@@ -38,7 +38,7 @@ material:
       format: "color"
   library: "ui_icons_material/material_icons"
   # https://developers.google.com/fonts/docs/material_symbols
-  template: >
+  template: >-
     <span
       class="material-symbols-outlined"
       style="
