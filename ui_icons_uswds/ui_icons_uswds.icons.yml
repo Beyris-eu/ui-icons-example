@@ -129,5 +129,5 @@ uswds:
       fill="{{ color }}"
       aria-hidden="true"
     >
-      <use xlink:href="{{ source }}#{{ icon_id }}"/>
+      <use href="{{ source }}#{{ icon_id }}"/>
     </svg>

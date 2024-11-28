@@ -36,5 +36,5 @@ icomoon_sprite:
       default: 32
   template: >-
     <svg viewBox="0 0 32 32" class="{{ icon_id|clean_class }}" width="{{ size|default(32) }}" height="{{ size|default(32) }}">
-      <use xlink:href="{{ source }}#{{ icon_id }}"></use>
+      <use href="{{ source }}#{{ icon_id }}"></use>
     </svg>

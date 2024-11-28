@@ -41,7 +41,7 @@ bootstrap:
         aria-label="{{ alt }}"
       {% endif %}
     >
-      <use xlink:href="{{ source }}#{{ icon_id }}"/>
+      <use href="{{ source }}#{{ icon_id }}"/>
     </svg>
 
 # Alternative SVG files.

@@ -81,5 +81,5 @@ remixicon_sprite:
       format: color
   template: >-
     <svg class="remix" width="{{ size|default(32) }}" height="{{ size|default(32) }}"{% if color %} fill="{{ color }}"{% endif %}>
-      <use xlink:href="{{ source }}#{{ icon_id }}"></use>
+      <use href="{{ source }}#{{ icon_id }}"></use>
     </svg>
