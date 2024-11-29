@@ -5,7 +5,7 @@ font_awesome:
   links:
     - https://fontawesome.com/icons
     - https://docs.fontawesome.com/web/add-icons/svg-sprites
-  version: 6.6.0
+  version: 6.7.1
   license:
     name: Font Awesome Free License
     url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
@@ -13,9 +13,9 @@ font_awesome:
   extractor: svg_sprite
   config:
     sources:
-      - fontawesome-free-6.6.0-web/sprites/brands.svg
-      - fontawesome-free-6.6.0-web/sprites/regular.svg
-      - fontawesome-free-6.6.0-web/sprites/solid.svg
+      - fontawesome-free-6.7.1-web/sprites/brands.svg
+      - fontawesome-free-6.7.1-web/sprites/regular.svg
+      - fontawesome-free-6.7.1-web/sprites/solid.svg
   settings:
     size:
       title: "Size"
@@ -52,7 +52,7 @@ font_awesome_svg:
   links:
     - https://fontawesome.com/icons
     - https://docs.fontawesome.com/web/add-icons/svg-bare
-  version: 6.6.0
+  version: 6.7.1
   license:
     name: Font Awesome Free License
     url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
@@ -60,7 +60,7 @@ font_awesome_svg:
   extractor: svg
   config:
     sources:
-      - fontawesome-free-6.6.0-web/svgs/{group}/{icon_id}.svg
+      - fontawesome-free-6.7.1-web/svgs/{group}/{icon_id}.svg
   settings:
     size:
       title: "Size"
@@ -96,7 +96,7 @@ font_awesome_name:
   description: "The Internet's icon library and toolkit, used by millions of designers, developers, and content creators."
   links:
     - https://docs.fontawesome.com/web/add-icons/svg-icon-names
-  version: 6.6.0
+  version: 6.7.1
   license:
     name: Font Awesome Free License
     url: https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt
@@ -104,10 +104,10 @@ font_awesome_name:
   extractor: font
   config:
     sources:
-      # - fontawesome-free-6.6.0-web/webfonts/fa-brands-400.ttf # brands seems to not work at the moment.
-      - fontawesome-free-6.6.0-web/webfonts/fa-regular-400.ttf
-      - fontawesome-free-6.6.0-web/webfonts/fa-solid-900.ttf
-      # - fontawesome-free-6.6.0-web/metadata/icons.yml
+      # - fontawesome-free-6.7.1-web/webfonts/fa-brands-400.ttf # brands seems to not work at the moment.
+      - fontawesome-free-6.7.1-web/webfonts/fa-regular-400.ttf
+      - fontawesome-free-6.7.1-web/webfonts/fa-solid-900.ttf
+      # - fontawesome-free-6.7.1-web/metadata/icons.yml
     offset: 48 # Font include normal characters that we can ignore.
   # https://docs.fontawesome.com/web/style/styling
   settings:
