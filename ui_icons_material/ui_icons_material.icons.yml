@@ -13,6 +13,8 @@ material:
   config:
     sources:
       - fonts/MaterialSymbolsOutlined[FILL,GRAD,opsz,wght].codepoints
+      # - fonts/MaterialSymbolsRounded[FILL,GRAD,opsz,wght].codepoints
+      # - fonts/MaterialSymbolsSharp[FILL,GRAD,opsz,wght].codepoints
   settings:
     size:
       title: "Size"
