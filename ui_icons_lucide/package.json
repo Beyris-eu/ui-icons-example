@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_lucide",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "lucide-static": "^0.462.0"
+  }
+}

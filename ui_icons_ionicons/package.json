@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_ionicons",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "ionicons": "^7.4.0"
+  }
+}
