@@ -13,7 +13,7 @@ Download and extract [Font Awesome For The Web](https://fontawesome.com/download
 So your folder structure is:
 
 ```
-fontawesome-free-6.6.0-web
+fontawesome-free-6.7.2-web
   └── svgs
     └── _GROUP_
   └── sprites
