@@ -29,9 +29,12 @@ bootstrap:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
+    class:
+      title: "Class"
+      type: "string"
   template: >-
     <svg
-      class="bi bi-{{ icon_id|clean_class }}"
+      class="bi bi-{{ icon_id|clean_class }} {{ class }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
       fill="{{ color|default('currentColor') }}"
@@ -71,6 +74,9 @@ bootstrap_svg:
       title: "Color"
       type: "string"
       format: "color"
+    class:
+      title: "Class"
+      type: "string"
   template: >-
     <svg{{
         attributes
@@ -78,6 +84,7 @@ bootstrap_svg:
           .setAttribute('width', size|default('32'))
           .setAttribute('height', size|default('32'))
           .setAttribute('aria-hidden', 'true')
+          .addClass(class)
     }}>
       {{ content }}
     </svg>
@@ -111,9 +118,12 @@ bootstrap_path:
       title: "Alt text"
       type: "string"
       description: "Accessibility alternative text, leave empty for decorative icon."
+    class:
+      title: "Class"
+      type: "string"
   template: >-
     <img
-      class="bi bi-{{ icon_id|clean_class }}"
+      class="bi bi-{{ icon_id|clean_class }} {{ class }}"
       src="{{ source }}"
       width="{{ size|default(32) }}"
       height="{{ size|default(32) }}"
@@ -154,9 +164,13 @@ bootstrap_name:
       title: "Color"
       type: "string"
       format: "color"
+    class:
+      title: "Class"
+      type: "string"
   # Do not clean class as id must be exact for class based.
   template: >-
-    <i class="bi bi-{{ icon_id }}"
+    <i class="bi bi-{{ icon_id }} {{ class }}"
+      "
       style="
         font-size:{{ size|default(32) }}px;
         {% if color %}color:{{ color }};{% endif %}
@@ -166,7 +180,7 @@ bootstrap_name:
   library: 'ui_icons_bootstrap/bootstrap_icons'
   # Do not clean class as id must be exact for class based.
   preview: >
-    <i class="bi bi-{{ icon_id|clean_class }}"
+    <i class="bi bi-{{ icon_id|clean_class }} {{ class }}"
       title="{{ label }}"
       style="
         font-size: {{ size|default(48) }}px;
