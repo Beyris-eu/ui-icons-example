@@ -9,11 +9,12 @@ See: https://www.drupal.org/docs/extending-drupal/installing-modules for further
 information.
 
 Download and extract [Font Awesome For The Web](https://fontawesome.com/download)
+and rename to avoid version number in path.
 
 So your folder structure is:
 
 ```
-fontawesome-free-6.7.2-web
+fontawesome-free
   └── svgs
     └── _GROUP_
   └── sprites
@@ -25,3 +26,8 @@ fontawesome-free-6.7.2-web
 ```
 
 _Note_: Depending the version (SVG, Sprite, Font), some folders can be removed.
+
+## Update
+
+When updating, the new version must be set in `ui_icons_fontawesome.icons.yml`
+and `ui_icons_fontawesome.libraries.yml`.

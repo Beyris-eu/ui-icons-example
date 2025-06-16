@@ -3,4 +3,4 @@ font_awesome_icons:
   css:
     component:
       # Relative to this file.
-      fontawesome-free-6.6.0-web/css/all.css: {}
+      fontawesome-free/css/all.min.css: { minified: true }
