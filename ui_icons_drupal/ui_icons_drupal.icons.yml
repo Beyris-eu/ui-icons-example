@@ -88,10 +88,14 @@ navigation:
       description: "Set a size for this icon."
       type: "integer"
       default: 32
+    class:
+      title: "Class"
+      type: "string"
   template: >-
     <svg{{
         attributes
           .addClass('icon')
+          .addClass(class)
           .setAttribute('viewBox', attributes.viewBox|default('0 0 32 32'))
           .setAttribute('width', size|default('32'))
           .setAttribute('height', size|default('32'))
