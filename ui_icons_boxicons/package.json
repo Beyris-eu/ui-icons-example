@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_boxicons",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "boxicons": "^2.1.4"
+  }
+}

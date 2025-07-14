@@ -1,0 +1,75 @@
+flowbite_out:
+  enabled: true
+  label: "Flowbite outline"
+  description: "Free and open-source collection of over 430+ SVG icons built for Tailwind CSS and Figma."
+  links:
+    - https://github.com/themesberg/flowbite-icons
+  version: 1.5.0
+  license:
+    name: MIT
+    url: https://github.com/themesberg/flowbite-icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/flowbite-icons/src/outline/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    class:
+      title: "Class"
+      type: "string"
+  template: >-
+    <svg xmlns="http://www.w3.org/2000/svg"{{
+        attributes
+          .setAttribute('viewBox', attributes.viewBox|default('0 0 24 24'))
+          .setAttribute('width', size|default('32'))
+          .setAttribute('height', size|default('32'))
+          .setAttribute('fill', 'none')
+          .setAttribute('aria-hidden', 'true')
+          .addClass(class)
+    }}>
+      {{ content }}
+    </svg>
+
+flowbite_sld:
+  enabled: true
+  label: "Flowbite Solid"
+  description: "Free and open-source collection of over 430+ SVG icons built for Tailwind CSS and Figma."
+  links:
+    - https://github.com/themesberg/flowbite-icons
+  version: 1.5.0
+  license:
+    name: MIT
+    url: https://github.com/themesberg/flowbite-icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/flowbite-icons/src/solid/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    class:
+      title: "Class"
+      type: "string"
+  template: >-
+    <svg xmlns="http://www.w3.org/2000/svg"{{
+        attributes
+          .setAttribute('viewBox', attributes.viewBox|default('0 0 24 24'))
+          .setAttribute('width', size|default('32'))
+          .setAttribute('height', size|default('32'))
+          .setAttribute('fill', color|default('currentColor'))
+          .setAttribute('aria-hidden', 'true')
+          .addClass(class)
+    }}>
+      {{ content }}
+    </svg>

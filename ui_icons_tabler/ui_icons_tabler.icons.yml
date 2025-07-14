@@ -1,0 +1,140 @@
+tabler:
+  enabled: true
+  label: Tabler Icons filled
+  description: "A set of 5944 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a 2px stroke."
+  links:
+    - https://github.com/tabler/tabler-icons
+  version: 3.34.0
+  license:
+    name: MIT
+    url: https://github.com/tabler/tabler-icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/@tabler/icons/icons/filled/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: Fill
+      type: string
+      format: color
+    stroke:
+      title: "Stroke width"
+      type: "number"
+      default: 1.25
+      minimum: 1.0
+      maximum: 2.0
+      multipleOf: 0.1
+  template: >-
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler"
+      viewBox="0 0 24 24"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      stroke-width="stroke|default('1.25')"
+      stroke="{{ color|default('currentColor') }}""
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      {{ content }}
+    </svg>
+
+tabler_outline:
+  enabled: true
+  label: Tabler Icons outline
+  description: "A set of 5944 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a 2px stroke."
+  links:
+    - https://github.com/tabler/tabler-icons
+  version: 3.34.0
+  license:
+    name: MIT
+    url: https://github.com/tabler/tabler-icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/@tabler/icons/icons/outline/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: Fill
+      type: string
+      format: color
+    stroke:
+      title: "Stroke width"
+      type: "number"
+      default: 1.25
+      minimum: 1.0
+      maximum: 2.0
+      multipleOf: 0.1
+  template: >-
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler"
+      viewBox="0 0 24 24"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      stroke-width="stroke|default('1.25')"
+      stroke="{{ color|default('currentColor') }}""
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      {{ content }}
+    </svg>
+
+tabler_cat:
+  enabled: true
+  label: Tabler Icons categories
+  description: "A set of 5944 free MIT-licensed high-quality SVG icons for you to use in your web projects. Each icon is designed on a 24x24 grid and a 2px stroke."
+  links:
+    - https://github.com/tabler/tabler-icons
+  version: 3.34.0
+  license:
+    name: MIT
+    url: https://github.com/tabler/tabler-icons/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/@tabler/icons/categories/outline/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: Fill
+      type: string
+      format: color
+    stroke:
+      title: "Stroke width"
+      type: "number"
+      default: 1.25
+      minimum: 1.0
+      maximum: 2.0
+      multipleOf: 0.1
+  template: >-
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="icon icon-tabler"
+      viewBox="0 0 24 24"
+      width="{{ size|default(32) }}"
+      height="{{ size|default(32) }}"
+      stroke-width="stroke|default('1.25')"
+      stroke="{{ color|default('currentColor') }}""
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      {{ content }}
+    </svg>

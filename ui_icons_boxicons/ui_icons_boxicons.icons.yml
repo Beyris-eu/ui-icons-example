@@ -1,0 +1,33 @@
+boxicons:
+  enabled: true
+  label: "Boxicons"
+  description: "High Quality web friendly icons."
+  links:
+    - https://github.com/atisawd/boxicons
+  version: 2.1.4
+  license:
+    name: MIT
+    url: https://github.com/atisawd/boxicons/blob/master/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/boxicons/svg/{group}/*.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 24
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+  template: >-
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+      class="icon boxicons boxicons-{{ icon_id|clean_class }}"
+      width="{{ size|default(24) }}"
+      height="{{ size|default(24) }}"
+      fill="{{ color|default(currentColor) }}"
+    >
+      {{ content }}
+    </svg>

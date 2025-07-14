@@ -1,0 +1,7 @@
+name: "UI Icons Tabler icons"
+type: module
+description: "A set of 5944 free MIT-licensed high-quality SVG icons, see README for installation."
+package: User interface Icon packs
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - ui_icons:ui_icons

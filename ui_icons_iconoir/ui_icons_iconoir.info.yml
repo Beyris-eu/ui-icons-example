@@ -1,0 +1,7 @@
+name: "UI Icons Iconoir"
+type: module
+description: "Iconoir is an open-source library with 1500+ unique SVG icons, see README for installation."
+package: User interface Icon packs
+core_version_requirement: ^10.3 || ^11
+dependencies:
+  - ui_icons:ui_icons

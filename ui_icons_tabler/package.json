@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_tabler",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "@tabler/icons": "^3.34.0"
+  }
+}

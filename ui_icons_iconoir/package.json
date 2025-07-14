@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_iconoir",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "iconoir": "^7.11.0"
+  }
+}

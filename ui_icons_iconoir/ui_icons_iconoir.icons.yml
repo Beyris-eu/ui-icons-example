@@ -1,0 +1,50 @@
+iconoir:
+  enabled: true
+  label: "Iconoir"
+  description: "Iconoir is an open-source library with 1500+ unique SVG icons, designed on a 24x24 pixels grid."
+  links:
+    - https://github.com/iconoir-icons/iconoir
+  version: 7.11.0
+  license:
+    name: MIT
+    url: https://github.com/iconoir-icons/iconoir/blob/main/LICENSE
+    gpl-compatible: true
+  extractor: svg
+  config:
+    sources:
+      - node_modules/iconoir/icons/{group}/{icon_id}.svg
+  settings:
+    size:
+      title: "Size"
+      type: "integer"
+      default: 32
+    color:
+      title: "Color"
+      type: "string"
+      format: "color"
+    stroke:
+      title: "Stroke width"
+      type: "number"
+      default: 1.5
+      minimum: 1.0
+      maximum: 2.0
+      multipleOf: 0.1
+  template: >-
+    {% if color is defined %}
+    <span style="color: {{ color }};">
+    {% endif %}
+    <svg xmlns="http://www.w3.org/2000/svg"{{
+        attributes
+          .setAttribute('viewBox', attributes.viewBox|default('0 0 24 24'))
+          .setAttribute('width', size|default('32'))
+          .setAttribute('height', size|default('32'))
+          .setAttribute('fill', 'none')
+          .setAttribute('stroke-width', stroke|default('1.5'))
+          .setAttribute('aria-hidden', 'true')
+          .addClass('icon')
+    }}>
+      {{ content }}
+    </svg>
+    {% if color is defined %}
+    </span>
+    {% endif %}

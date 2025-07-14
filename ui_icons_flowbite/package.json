@@ -1,0 +1,8 @@
+{
+  "name": "ui_icons_flowbite",
+  "private": true,
+  "license": "ISC",
+  "dependencies": {
+    "flowbite-icons": "^1.5.0"
+  }
+}
