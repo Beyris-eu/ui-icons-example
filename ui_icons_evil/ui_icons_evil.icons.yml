@@ -3,7 +3,7 @@ evil:
   label: "Evil"
   description: "Simple and clean SVG icon pack, see README for installation."
   links:
-    - https://evil-icons.io/
+    - https://github.com/evil-icons/evil-icons
   version: 1.9.0
   license:
     name: MIT

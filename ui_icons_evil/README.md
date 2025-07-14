@@ -1,6 +1,6 @@
 ## INTRODUCTION
 
-The [Evil icons](https://evil-icons.io) module provider for UI Icons.
+The [Evil icons](https://github.com/evil-icons/evil-icons) module provider for UI Icons.
 
 ## INSTALLATION
 
