@@ -11,27 +11,27 @@ core:
   extractor: path
   config:
     sources:
-      # From https://www.drupal.org/about/media-kit/logos
-      - https://www.drupal.org/files/drupal-wordmark.png
-      - https://www.drupal.org/files/EL_blue_RGB%281%29.png
-      - https://www.drupal.org/files/Wordmark2_blue_RGB%281%29.png
-      - https://www.drupal.org/files/Wordmark_blue_RGB.png
-      - https://www.drupal.org/files/D10-logo.png
-      - https://www.drupal.org/files/druplicon-small.png
-      # External PHP logo.
-      - https://www.php.net/images/php8/logo_php8.svg
-      - https://www.php.net/images/php8/logo_php8_3.svg
-      # Drupal core misc icons.
-      - /core/{group}/logo/*.svg
-      - /core/{group}/icons/*/*.svg
-      # CKEditor5 icons.
-      - /core/{group}/ckeditor5/icons/*.svg
-      - /core/{group}/ckeditor5/js/ckeditor5_plugins/drupalMedia/theme/icons/*.svg
-      - /core/{group}/image/images/error.svg
-      - /core/{group}/image/images/upload.svg
-      # Umami demo icons.
-      - /core/profiles/demo_umami/themes/{group}/components/badge/icons/*.svg
-      - /core/profiles/demo_umami/themes/{group}/images/svg/*.svg
+    # From https://www.drupal.org/about/media-kit/logos
+    - https://www.drupal.org/files/drupal-wordmark.png
+    - https://www.drupal.org/files/EL_blue_RGB%281%29.png
+    - https://www.drupal.org/files/Wordmark2_blue_RGB%281%29.png
+    - https://www.drupal.org/files/Wordmark_blue_RGB.png
+    - https://www.drupal.org/files/D10-logo.png
+    - https://www.drupal.org/files/druplicon-small.png
+    # External PHP logo.
+    - https://www.php.net/images/php8/logo_php8.svg
+    - https://www.php.net/images/php8/logo_php8_3.svg
+    # Drupal core misc icons.
+    - /core/{group}/logo/*.svg
+    - /core/{group}/icons/*/*.svg
+    # CKEditor5 icons.
+    - /core/{group}/ckeditor5/icons/*.svg
+    - /core/{group}/ckeditor5/js/ckeditor5_plugins/drupalMedia/theme/icons/*.svg
+    - /core/{group}/image/images/error.svg
+    - /core/{group}/image/images/upload.svg
+    # Umami demo icons.
+    - /core/profiles/demo_umami/themes/{group}/components/badge/icons/*.svg
+    - /core/profiles/demo_umami/themes/{group}/images/svg/*.svg
 
   settings:
     # Because we can have wild icons not with a square ratio, do not use size.
@@ -80,8 +80,7 @@ navigation:
   extractor: svg
   config:
     sources:
-      - /core/modules/navigation/assets/icons/*.svg
-      - /core/modules/navigation/components/toolbar-button/assets/*.svg
+    - /core/modules/navigation/assets/icons/*.svg
   settings:
     size:
       title: "Size"
@@ -117,7 +116,7 @@ olivero:
   extractor: path
   config:
     sources:
-      - /core/themes/olivero/images/*.svg
+    - /core/themes/olivero/images/*.svg
   settings:
     # Because we can have wild icons not with a square ratio, do not use size.
     width:
@@ -165,16 +164,16 @@ claro:
   extractor: path
   config:
     sources:
-      # Same icon id in color named folders are not supported, pick grey version
-      # and cherry pick some icons. Order is important for icon discovery, lower
-      # with some icon_id (filename) will override previous.
-      - /core/themes/claro/images/icons/003ecc/*.svg
-      - /core/themes/claro/images/icons/000f33/*.svg
-      - /core/themes/claro/images/icons/82828c/circle.svg
-      - /core/themes/claro/images/icons/545560/*.svg
-      - /core/themes/claro/images/icons/e0ac00/*.svg
-      - /core/themes/claro/images/icons/e34f4f/*.svg
-      - /core/themes/claro/images/icons/868686/*.svg
+    # Same icon id in color named folders are not supported, pick grey version
+    # and cherry pick some icons. Order is important for icon discovery, lower
+    # with some icon_id (filename) will override previous.
+    - /core/themes/claro/images/icons/003ecc/*.svg
+    - /core/themes/claro/images/icons/000f33/*.svg
+    - /core/themes/claro/images/icons/82828c/circle.svg
+    - /core/themes/claro/images/icons/545560/*.svg
+    - /core/themes/claro/images/icons/e0ac00/*.svg
+    - /core/themes/claro/images/icons/e34f4f/*.svg
+    - /core/themes/claro/images/icons/868686/*.svg
   settings:
     # Because we can have wild icons not with a square ratio, do not use size.
     width:
@@ -222,7 +221,7 @@ starterkit:
   extractor: path
   config:
     sources:
-      - /core/themes/starterkit_theme/images/icons/*
+    - /core/themes/starterkit_theme/images/icons/*
   settings:
     # Because we can have wild icons not with a square ratio, do not use size.
     width:
